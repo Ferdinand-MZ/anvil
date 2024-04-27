@@ -38,7 +38,7 @@
     let html5CodeScanner = new Html5QrcodeScanner(
         "canvas_camera", {
             fps: 30,
-            qrbox: 400
+            qrbox: 300
             }
         )
     function handleOpenCamera() {

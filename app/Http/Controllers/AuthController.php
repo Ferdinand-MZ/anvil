@@ -23,7 +23,7 @@ class AuthController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $route = '';
-            if (auth()->user()->status == 'pengurus') {
+            if (in_array(auth()->user()->status, ['pengurus', 'admin'])) {
                 $route = 'dashboard';
             } else {
                 $route = 'landing';
