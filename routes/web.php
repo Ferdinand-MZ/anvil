@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ArchiveController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventAbsenceController;
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\LandingController;
-use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,3 +70,5 @@ Route::controller(EventController::class)->middleware('auth')->middleware('check
 Route::controller(EventAbsenceController::class)->group(function () {
     Route::post('/proker-agenda/absensi/store/{uuid}', 'store_absensi')->name('proker-agenda.absensi.store');
 });
+
+Route::resource('admin/archive', ArchiveController::class)->middleware('auth');

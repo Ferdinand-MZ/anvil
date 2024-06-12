@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             OrganizationsSeeder::class,
             UsersSeeder::class,
             BiroDepartmentsSeeder::class,
-            PengurusHariansSeeder::class
+            PengurusHariansSeeder::class,
+            ArchiveCategorySeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

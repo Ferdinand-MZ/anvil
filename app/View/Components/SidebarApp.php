@@ -69,6 +69,20 @@ class SidebarApp extends Component
                 ]
             ],
             [
+                'name' => 'Arsip',
+                'icon' => '<i class="bi bi-archive-fill"></i>',
+                'url' => 'archive.index',
+                'slug_name' => 'arsip-data',
+                'access' => ['admin', 'pengurus'],
+                'children' => [
+                    [
+                        'name' => 'Kelola Arsip Surat',
+                        'url' => 'archive.index',
+                        'slug_name' => 'kelola-arsip-surat'
+                    ]
+                ]
+            ],
+            [
                 'name' => 'Profile',
                 'icon' => '<i class="bi bi-person-circle"></i>',
                 'url' => 'profile',
@@ -87,6 +101,7 @@ class SidebarApp extends Component
                     ],
                 ]
             ],
+
         ];
     }
 
