@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\LetterType;
 use App\Models\PengurusHarian;
 use Illuminate\Database\Seeder;
 
@@ -21,7 +22,8 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             BiroDepartmentsSeeder::class,
             PengurusHariansSeeder::class,
-            ArchiveCategorySeeder::class
+            ArchiveCategorySeeder::class,
+            LetterTypeSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

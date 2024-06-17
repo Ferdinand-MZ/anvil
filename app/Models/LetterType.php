@@ -4,14 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class ArchiveCategory extends Model
+class LetterType extends Model
 {
     use HasFactory;
-    // protected $guarded = [
-    //     'name'
-    // ];
 
     public function archive(): HasMany
     {

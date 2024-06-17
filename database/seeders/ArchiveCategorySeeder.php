@@ -15,13 +15,13 @@ class ArchiveCategorySeeder extends Seeder
     {
         $archives = [
             [
-                'name' => 'Certificate'
+                'name' => 'Sertifikat'
             ],
             [
                 'name' => 'Proposal'
             ],
             [
-                'name' => 'Letter'
+                'name' => 'Surat'
             ]
             ];
             foreach ($archives as $archive){

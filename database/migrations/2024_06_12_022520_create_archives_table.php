@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->uuid();
             $table->foreignId('user_id')->constrained()->restrictOnUpdate()->restrictOnDelete();
-            $table->string('filename');
+            $table->foreignId('letter_type_id')->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->foreignId('archive_category_id')->constrained()->restrictOnUpdate()->restrictOnDelete();
+            $table->date('date_at')->nullable();
+            $table->string('letter_from');
+            $table->string('description');
             $table->string('filepath');
             $table->timestamps();
             $table->softDeletes();

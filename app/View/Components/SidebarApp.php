@@ -70,7 +70,7 @@ class SidebarApp extends Component
             ],
             [
                 'name' => 'Arsip',
-                'icon' => '<i class="bi bi-archive-fill"></i>',
+                'icon' => '<i class="bi bi-file-zip"></i>',
                 'url' => 'archive.index',
                 'slug_name' => 'arsip-data',
                 'access' => ['admin', 'pengurus'],
@@ -79,6 +79,16 @@ class SidebarApp extends Component
                         'name' => 'Kelola Arsip Surat',
                         'url' => 'archive.index',
                         'slug_name' => 'kelola-arsip-surat'
+                    ],
+                    [
+                        'name' => 'Surat Masuk',
+                        'url' => 'archive.inbox',
+                        'slug_name' => 'surat-masuk'
+                    ],
+                    [
+                        'name' => 'Surat Keluar',
+                        'url' => 'archive.outbox',
+                        'slug_name' => 'surat-keluar'
                     ]
                 ]
             ],

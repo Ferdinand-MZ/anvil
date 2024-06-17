@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ArchiveController;
+use App\Http\Controllers\ArchivesController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventAbsenceController;
@@ -71,4 +72,17 @@ Route::controller(EventAbsenceController::class)->group(function () {
     Route::post('/proker-agenda/absensi/store/{uuid}', 'store_absensi')->name('proker-agenda.absensi.store');
 });
 
-Route::resource('admin/archive', ArchiveController::class)->middleware('auth');
+
+Route::controller(ArchivesController::class)->middleware(['auth', 'check-status:pengurus,admin'])->prefix('admin')->group(function() {
+    Route::get('archive', 'index_archive')->name('archive.index');
+    Route::get('archive/create',  'create_archive')->name('archive.create');
+    Route::post('archive', 'store_archive')->name('archive.store');
+    Route::get('archive/{archive}/edit', 'edit_archive')->name('archive.edit');
+    Route::put('archive/{archive}', 'update_archive')->name('archive.update');
+    // Route::delete('archive/{archive}', 'destroy')->name('archive.destroy');
+
+    Route::get('archive/inbox',  'inbox')->name('archive.inbox');
+    Route::get('archive/outbox',  'outbox')->name('archive.outbox');
+});
+
+
