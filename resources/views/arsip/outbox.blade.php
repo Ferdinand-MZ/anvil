@@ -19,19 +19,16 @@
                             <table class="table v-middle" id="table_arsip_outbox">
                                 <thead>
                                     <tr>
-                                        <th>Dibuat Oleh</th>
                                         <th>Nomor Surat</th>
                                         <th>Jenis Surat</th>
-                                        <th>Kategori Surat</th>
                                         <th>Tanggal</th>
                                         <th>Asal Surat</th>
-                                        <th>Keterangan</th>
+                                        <th>Perihal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($archives as $key => $archive)
                                         <tr>
-                                            <td>{{ $archive->user->name }}</td>
                                             <td>
                                                 <a href="{{ asset($archive->filepath) }}" download
                                                     style="color: black; text-decoration: none;"
@@ -41,7 +38,6 @@
                                                 </a>
                                             </td>
                                             <td>{{ $archive->letterType->name }}</td>
-                                            <td>{{ $archive->archiveCategory->name }}</td>
                                             <td>{{ $archive->date_at }}</td>
                                             <td>{{ $archive->letter_from }}</td>
                                             <td>{{ $archive->description }}</td>
