@@ -82,7 +82,16 @@ Route::controller(ArchivesController::class)->middleware(['auth', 'check-status:
     // Route::delete('archive/{archive}', 'destroy')->name('archive.destroy');
 
     Route::get('archive/inbox',  'inbox')->name('archive.inbox');
+    Route::get('archive/inbox/print',  'inbox_print')->name('archive.inbox.print');
+
     Route::get('archive/outbox',  'outbox')->name('archive.outbox');
+    Route::get('archive/outbox/print',  'outbox_print')->name('archive.outbox.print');
+
+    Route::get('archive/sertifikat',  'sertifikat')->name('archive.sertifikat');
+    Route::get('archive/sertifikat/print',  'sertifikat_print')->name('archive.sertifikat.print');
+
+    Route::get('archive/proposal',  'proposal')->name('archive.proposal');
+    Route::get('archive/proposal/print',  'proposal_print')->name('archive.proposal.print');
 });
 
 

@@ -78,7 +78,7 @@ class SidebarApp extends Component
                     [
                         'name' => 'Kelola Arsip Surat',
                         'url' => 'archive.index',
-                        'slug_name' => 'kelola-arsip-surat'
+                        'slug_name' => 'arsip-surat-masuk'
                     ],
                     [
                         'name' => 'Surat Masuk',
@@ -88,8 +88,18 @@ class SidebarApp extends Component
                     [
                         'name' => 'Surat Keluar',
                         'url' => 'archive.outbox',
-                        'slug_name' => 'surat-keluar'
-                    ]
+                        'slug_name' => 'arsip-surat-keluar'
+                    ],
+                    [
+                        'name' => 'Sertifikat',
+                        'url' => 'archive.sertifikat',
+                        'slug_name' => 'arsip-sertifikat'
+                    ],
+                    [
+                        'name' => 'Proposal',
+                        'url' => 'archive.proposal',
+                        'slug_name' => 'arsip-proposal'
+                    ],
                 ]
             ],
             [

@@ -8,37 +8,37 @@
             <div class="col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Data Surat Masuk</div>
+                        <div class="card-title">Data Proposal</div>
                     </div>
                     <div class="card-body">
                         <div class="d-flex flex-wrap gap-1 mb-3">
-                            <a href="{{ route('archive.inbox.print') }}" class="btn btn-sm btn-success">Print Data</a>
+                            <a href="{{ route('archive.proposal.print') }}" class="btn btn-sm btn-success">Print Data</a>
                         </div>
 
                         <div class="table-responsive">
                             <table class="table v-middle" id="table_arsip_inbox">
                                 <thead>
                                     <tr>
-                                        <th>Nomor Surat</th>
-                                        <th>Jenis Surat</th>
+                                        <th>Nomor Dokumen</th>
+                                        <th>Jenis Dokumen</th>
                                         <th>Tanggal</th>
-                                        <th>Asal Surat</th>
-                                        <th>Perihal</th>
+                                        <th>Asal Dokumen</th>
+                                        <th>Keterangan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($archives as $key => $archive)
+                                    @foreach ($proposals as $key => $proposal)
                                         <tr>
-                                            <td><a href="{{ asset($archive->filepath) }}" download
+                                            <td><a href="{{ asset($proposal->filepath) }}" download
                                                     style="color: black; text-decoration: none;"
                                                     onmouseover="this.style.color='blue';"
                                                     onmouseout="this.style.color='black';">
-                                                    {{ $archive->filename }}
+                                                    {{ $proposal->filename }}
                                                 </a></td>
-                                            <td>{{ $archive->letterType->name }}</td>
-                                            <td>{{ $archive->date_at }}</td>
-                                            <td>{{ $archive->letter_from }}</td>
-                                            <td>{{ $archive->description }}</td>
+                                            <td>{{ $proposal->archiveCategory->name }}</td>
+                                            <td>{{ $proposal->date_at }}</td>
+                                            <td>{{ $proposal->letter_from }}</td>
+                                            <td>{{ $proposal->description }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

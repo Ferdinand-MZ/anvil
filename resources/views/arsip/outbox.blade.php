@@ -12,7 +12,7 @@
                     </div>
                     <div class="card-body">
                         <div class="d-flex flex-wrap gap-1 mb-3">
-                            <a href="#" class="btn btn-sm btn-success">Print Data</a>
+                            <a href="{{ route('archive.outbox.print') }}" class="btn btn-sm btn-success">Print Data</a>
                         </div>
 
                         <div class="table-responsive">

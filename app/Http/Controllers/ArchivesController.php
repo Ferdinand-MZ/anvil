@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Archive;
 use App\Models\ArchiveCategory;
 use App\Models\LetterType;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class ArchivesController extends Controller
 {
     public function index_archive()
     {
-        $archives = Archive::orderBy('created_at', 'desc')->get()
+        $archives = Archive::orderBy('date_at', 'desc')->get()
             ->map(function($archive) {
                 // Menggunakan basename() untuk mendapatkan nama file dari path
                 $archive->filename = basename($archive->filepath);
@@ -130,16 +131,36 @@ class ArchivesController extends Controller
         $archives = Archive::where([
             ['letter_type_id', 1],
             ['archive_category_id', 3]
-        ])->orderBy('created_at', 'desc') // Menambahkan orderBy secara eksplisit untuk mengurutkan berdasarkan created_at
+        ])->orderBy('date_at', 'desc')
         ->get()->map(function ($archive) {
             $archive->filename = basename($archive->filepath);
             return $archive;
         });
 
-        return view('arsip.outbox', [
-            'title' => 'HIMATIKOM | Outbox', // Mengubah judul sesuai dengan konteks
+        return view('arsip.inbox', [
+            'title' => 'HIMATIKOM | Inbox',
             'archives' => $archives,
         ]);
+    }
+
+    public function inbox_print()
+    {
+        $archives = Archive::where([
+            ['letter_type_id', 1],
+            ['archive_category_id', 3]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        $pdf = new Pdf;
+        $pdf = Pdf::loadView('print.surat-masuk', [
+            'title' => 'HIMATIKOM | Inbox',
+            'archives' => $archives,
+        ])->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+
+        return $pdf->stream('inbox.pdf');
     }
 
 
@@ -148,7 +169,7 @@ class ArchivesController extends Controller
         $archives = Archive::where([
             ['letter_type_id', 2],
             ['archive_category_id', 3]
-        ])->orderBy('created_at', 'desc')
+        ])->orderBy('date_at', 'desc')
         ->get()->map(function ($archive) {
             $archive->filename = basename($archive->filepath);
             return $archive;
@@ -159,5 +180,95 @@ class ArchivesController extends Controller
             'archives' => $archives,
         ]);
 
+    }
+
+    public function outbox_print()
+    {
+        $archives = Archive::where([
+            ['letter_type_id', 2],
+            ['archive_category_id', 3]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        $pdf = new Pdf;
+        $pdf = Pdf::loadView('print.surat-masuk', [
+            'title' => 'HIMATIKOM | Outbox',
+            'archives' => $archives,
+        ])->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+
+        return $pdf->stream('outbox.pdf');
+    }
+
+    public function proposal()
+    {
+        $proposals = Archive::where([
+            ['archive_category_id', 2]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        return view('arsip.proposal', [
+            'title' => 'HIMATIKOM | Proposal',
+            'proposals' => $proposals,
+        ]);
+    }
+
+    public function proposal_print()
+    {
+        $proposals = Archive::where([
+            ['archive_category_id', 2]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        $pdf = new Pdf;
+        $pdf = Pdf::loadView('print.proposal-print', [
+            'title' => 'HIMATIKOM | Prpposal',
+            'proposals' => $proposals,
+        ])->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+
+        return $pdf->stream('proposal.pdf');
+    }
+
+    public function sertifikat()
+    {
+        $certificates = Archive::where([
+            ['archive_category_id', 1]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        return view('arsip.sertifikat', [
+            'title' => 'HIMATIKOM | Sertifikat',
+            'certificates' => $certificates,
+        ]);
+    }
+
+    public function sertifikat_print()
+    {
+        $certificates = Archive::where([
+            ['archive_category_id', 1]
+        ])->orderBy('date_at', 'desc')
+        ->get()->map(function ($archive) {
+            $archive->filename = basename($archive->filepath);
+            return $archive;
+        });
+
+        $pdf = new Pdf;
+        $pdf = Pdf::loadView('print.sertifikat-print', [
+            'title' => 'HIMATIKOM | Sertifikat',
+            'certificates' => $certificates,
+        ])->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+
+        return $pdf->stream('sertifikat.pdf');
     }
 }

@@ -20,6 +20,9 @@ class LetterTypeSeeder extends Seeder
             [
                 'name' => 'Surat Keluar'
             ],
+            [
+                'name' => 'Dokumen'
+            ],
         ];
             foreach ($archives as $archive){
                 LetterType::insert([

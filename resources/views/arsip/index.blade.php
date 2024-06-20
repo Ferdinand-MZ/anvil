@@ -21,11 +21,11 @@
                                 <thead>
                                     <tr>
                                         <th>Dibuat Oleh</th>
-                                        <th>Nomor Surat</th>
-                                        <th>Jenis Surat</th>
-                                        <th>Kategori Surat</th>
+                                        <th>Nomor Dokumen</th>
+                                        <th>Jenis Dokumen</th>
+                                        <th>Kategori Dokumen</th>
                                         <th>Tanggal</th>
-                                        <th>Asal Surat</th>
+                                        <th>Asal Dokumen</th>
                                         <th>Keterangan</th>
                                         <th>Aksi</th>
                                     </tr>
