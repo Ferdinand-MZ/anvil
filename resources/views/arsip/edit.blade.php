@@ -20,6 +20,10 @@
                             <!-- Row start -->
                             <div class="row">
 
+                                {{--
+                                Fitur Baru
+                                --}}
+
                                 <!--Jenis Surat-->
                                 <div class="col-xl-6 col-sm-12 col-12">
                                     <div class="mb-3">
