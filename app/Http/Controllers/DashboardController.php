@@ -58,7 +58,7 @@ class DashboardController extends Controller
             'phone' => 'required|numeric',
             'generation' => 'required|numeric',
             'study_program_id' => 'required|not_in:pilih',
-            'group_id' => 'required|not_id:pilih',
+            'group_id' => 'required|not_in:pilih',
         ]);
         User::where('uuid', auth()->user()->uuid)->insert([
             'name' => $request->name,
