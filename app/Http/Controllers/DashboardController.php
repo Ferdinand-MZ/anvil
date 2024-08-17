@@ -61,6 +61,7 @@ class DashboardController extends Controller
             'group_id' => 'required|not_in:pilih',
         ]);
         User::where('uuid', auth()->user()->uuid)->insert([
+            'uuid' => uuid_create(),
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->nim),
