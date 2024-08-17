@@ -60,8 +60,7 @@ class DashboardController extends Controller
             'study_program_id' => 'required|not_in:pilih',
             'group_id' => 'required|not_in:pilih',
         ]);
-        User::where('uuid', auth()->user()->uuid)->insert([
-            'uuid' => uuid_create(),
+        User::where('uuid', auth()->user()->uuid)->update([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->nim),
