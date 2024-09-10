@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mx-auto my-auto">
-                    <h1 class="text-white">JURUSAN TEKNOLOGI DAN INFORMASI</h1>
+                    <h1 class="text-white">JURUSAN TEKNOLOGI & INFORMASI</h1>
                     <p class="lead mb-4 text-white opacity-8">Yes we're HIMATIKOM, Always is the best, Always in my
                         souls, Never surrender. Our pride our family.</p>
                     <h6 class="text-white mb-2 mt-5">Find Us</h6>
