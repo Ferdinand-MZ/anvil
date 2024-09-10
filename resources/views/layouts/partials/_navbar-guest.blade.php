@@ -3,7 +3,7 @@
     <div class="container">
         <a
             class="navbar-brand  text-white "
-            href="#"
+            href="/"
             title="Designed and Coded by Creative Tim"
         >
             JTIK POLSUB
@@ -54,16 +54,10 @@
                     >
                         <div class="d-none d-lg-block">
                             <a
-                                href="{{ request()->route()->getName() == 'visi' ? '#octagram' : route('visi') }}"
+                                href="{{ request()->route()->getName() == 'visi-misi' ? '#octagram' : route('visi-misi') }}"
                                 class="dropdown-item border-radius-md mt-2 mb-2"
                             >
-                                <span>Visi</span>
-                            </a>
-                            <a
-                                href="{{ request()->route()->getName() == 'misi' ? '#our_team' : route('misi') }}"
-                                class="dropdown-item border-radius-md mb-2"
-                            >
-                                <span>Misi</span>
+                                <span>Visi & Misi</span>
                             </a>
                             <a
                                 href="{{ request()->route()->getName() == 'tujuan' ? '#feedback' : route('tujuan') }}"
@@ -78,7 +72,7 @@
                                 <span>Riwayat Singkat</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? '#feedback' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'struktur-organisasi' ? '#feedback' : route('struktur-organisasi') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Struktur Organisasi</span>
@@ -98,7 +92,7 @@
                         </div>
                         <div class="d-lg-none">
                             <a
-                                href="#visi"
+                                href="#visi-misi"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Visi</span>

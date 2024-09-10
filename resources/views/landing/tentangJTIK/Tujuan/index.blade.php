@@ -33,7 +33,7 @@
     </div>
 </header>
 <!-- -------- END HEADER 7 w/ text and video ------- -->
-<div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+<div class="shadow-xl mx-3 mx-md-4 mt-n6">
     <!-- Section with four info areas left & one card right with image and waves -->
     <section
         class="py-7"
@@ -43,11 +43,11 @@
             <div class="row align-items-center">
                 
                 <div class="col-lg-12  ms-auto mt-lg-0 mt-4">
-                    <div class="card border-none shadow-none">
+                    <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8"">
                         <div class="card-body text-center">
-                            <h5 class="font-weight-normal">
-                                <a href="#">Visi Kami</a>
-                            </h5>
+                            <h4 class="font-weight-bold">
+                                Tujuan Kami
+                            </h4>
                             <p class="mb-0 text-start">
                                 1. Menghasilkan tenaga profesional di bidang manajemen informatika yang memiliki sikap dan kemampuan sebagai berikut:
                             </p>
@@ -71,12 +71,5 @@
             </div>
         </div>
     </section>
-    <!-- END Section with four info areas left & one card right with image and waves -->
-    <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-
-    <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
-    <!-- -------- START PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
-    
-    <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
 </div>
 @endsection

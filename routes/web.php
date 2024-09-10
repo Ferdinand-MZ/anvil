@@ -24,10 +24,10 @@ use App\Http\Controllers\EventAbsenceController;
 Route::controller(LandingController::class)->group(function () {
     Route::get('/', 'index')->name('landing');
     Route::get('/my-profile', 'profile')->name('my-profile')->middleware('auth');
-    Route::get('/visi', 'visi')->name('visi');
-    Route::get('/misi', 'misi')->name('misi');
+    Route::get('/visi-misi', 'visi_misi')->name('visi-misi');
     Route::get('/tujuan', 'tujuan')->name('tujuan');
     Route::get('/riwayat-singkat', 'riwayatSingkat')->name('riwayat-singkat');
+    Route::get('/struktur-organisasi', 'strukturOrganisasi')->name('struktur-organisasi');
     Route::get('/absensi', 'absensi')->name('absensi-online');
 });
 

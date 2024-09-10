@@ -32,25 +32,17 @@ class LandingController extends Controller
         ]);
     }
 
-    public function visi(): View
+    public function visi_misi(): View
     {
-        return view('landing.tentangJTIK.Visi.index', [
-            'title' => 'JTIK POLSUB | Visi',
-            'pengurus_harians' => PengurusHarian::all(),
-            'biro_departments' => BiroDepartment::all() 
-        ]);
-    }
-    public function misi(): View
-    {
-        return view('landing.tentangJTIK.Misi.index', [
-            'title' => 'JTIK POLSUB | Misi',
+        return view('landing.tentangJTIK.Visi-Misi.index', [
+            'title' => 'JTIK POLSUB | Visi & Misi',
             'pengurus_harians' => PengurusHarian::all(),
             'biro_departments' => BiroDepartment::all() 
         ]);
     }
     public function tujuan(): View
     {
-        return view('landing.tentangJTIK.Tujuan.index', [
+        return view('landing.tentangJTIK.tujuan.index', [
             'title' => 'JTIK POLSUB | Tujuan',
             'pengurus_harians' => PengurusHarian::all(),
             'biro_departments' => BiroDepartment::all() 
@@ -60,6 +52,14 @@ class LandingController extends Controller
     {
         return view('landing.tentangJTIK.riwayatSingkat.index', [
             'title' => 'JTIK POLSUB | Riwayat Singkat',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
+    public function strukturOrganisasi(): View
+    {
+        return view('landing.tentangJTIK.strukturOrganisasi.index', [
+            'title' => 'JTIK POLSUB | Struktur Organisasi',
             'pengurus_harians' => PengurusHarian::all(),
             'biro_departments' => BiroDepartment::all() 
         ]);
