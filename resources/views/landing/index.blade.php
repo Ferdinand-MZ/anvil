@@ -38,8 +38,7 @@
     <!-- Section with four info areas left & one card right with image and waves -->
     <section
         class="py-7"
-        id="octagram"
-    >
+        id="octagram">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
@@ -99,78 +98,57 @@
     </section>
     <!-- END Section with four info areas left & one card right with image and waves -->
     <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-    <section
-        class="pb-5 position-relative bg-gradient-dark mx-n3"
-        id="our_team"
-    >
+    <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="our_team">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 text-start mb-5 mt-5">
-                    <h3 class="text-white z-index-1 position-relative">Meet Our Team</h3>
-                    <span class="text-secondary">Badan Pengurus Harian</span>
+                <div class="col-md-8 mb-5 mt-5">
+                    <h3 class="text-white z-index-1 position-relative">Berita Terbaru</h3>
+                    <span class="text-secondary">Update Terkini</span>   
                 </div>
             </div>
-            <div class="row justify-content-center">
-                @foreach ($pengurus_harians as $key => $pengurus_harian)
-                <div class="col-lg-6 col-12 my-3">
-                    <div class="card card-profile mt-4">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                                <a href="#">
-                                    <div class="p-3 pe-md-0">
-                                        <img
-                                            class="w-100 border-radius-md shadow-lg"
-                                            src="{{ asset($pengurus_harian->photo) }}"
-                                            alt="Photo of {{ $pengurus_harian->name }}"
-                                        >
+            <div id="newsCarousel" class=" text-center carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($pengurus_harians->chunk(3) as $key => $chunk)
+                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                        <div class="row justify-content-center">
+                            @foreach ($chunk as $pengurus_harian)
+                            <div class="col-lg-4 col-md-6 col-12 my-3">
+                                <div class="card border-0 shadow-lg rounded">
+                                    <a href="#">
+                                        <img class="card-img-top rounded-top" 
+                                             src="{{ asset($pengurus_harian->photo) }}" 
+                                             alt="Photo of {{ $pengurus_harian->name }}">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-2">{{ $pengurus_harian->name }}</h5>
+                                        <p class="card-text text-secondary">{{ $pengurus_harian->description }}</p>
+                                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-8 col-md-6 col-12 my-auto">
-                                <div class="card-body ps-lg-0">
-                                    <h5 class="mb-0">{{ $pengurus_harian->name }}</h5>
-                                    <p class="mb-0">{{ $pengurus_harian->description }}</p>
+                                    <div class="card-footer text-muted">
+                                        {{ $pengurus_harian->date ?? 'Tanggal Tidak Diketahui' }}
+                                    </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
-            </div>
-            <div class="row">
-                <div class="col-md-8 text-start mb-5 mt-5">
-                    <span class="text-secondary">Biro dan Departemen</span>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                @foreach ($biro_departments as $key => $biro_departmen)
-                <div class="col-lg-6 col-12 my-3">
-                    <div class="card card-profile mt-4">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                                <a href="#">
-                                    <div class="p-3 pe-md-0">
-                                        <img
-                                            class="w-100 border-radius-md shadow-lg"
-                                            src="{{ asset($biro_departmen->photo) }}"
-                                            alt="Photo of {{ $biro_departmen->name }}"
-                                        >
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-8 col-md-6 col-12 my-auto">
-                                <div class="card-body ps-lg-0">
-                                    <h5 class="mb-0">{{ $biro_departmen->name }}</h5>
-                                    <p class="mb-0">{{ $biro_departmen->description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
+                <a class="carousel-control-prev" href="#newsCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#newsCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
             </div>
         </div>
     </section>
+    
+
+
+
     <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
     <!-- -------- START PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
     <section
