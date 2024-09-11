@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BiroDepartment;
+use App\Models\Fasilitas;
 use App\Models\PengurusHarian;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -66,11 +67,11 @@ class LandingController extends Controller
     }
 
     public function fasilitas(): View
-    {
-        return view('landing.tentangJTIK.fasilitas.findex', [
-            'title' => 'JTIK POLSUB | Struktur Organisasi',
-            'pengurus_harians' => PengurusHarian::all(),
-            'biro_departments' => BiroDepartment::all() 
-        ]);
-    }
+{
+    $fasilitas = Fasilitas::all();
+    return view('landing.tentangJTIK.fasilitas.findex', [
+        'title' => 'JTIK POLSUB | Fasilitas',
+        'fasilitas' => $fasilitas
+    ]);
+}
 }
