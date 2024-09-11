@@ -22,14 +22,15 @@ use App\Http\Controllers\EventAbsenceController;
 */
 
 Route::controller(LandingController::class)->group(function () {
-    Route::get('/rafi', 'fasilitas')->name('fasilitas');
     Route::get('/', 'index')->name('landing');
     Route::get('/my-profile', 'profile')->name('my-profile')->middleware('auth');
     Route::get('/visi-misi', 'visi_misi')->name('visi-misi');
     Route::get('/tujuan', 'tujuan')->name('tujuan');
     Route::get('/riwayat-singkat', 'riwayatSingkat')->name('riwayat-singkat');
     Route::get('/struktur-organisasi', 'strukturOrganisasi')->name('struktur-organisasi');
-    
+    Route::get('/fasilitas-2024', 'fasilitas')->name('fasilitas');
+    Route::get('/kompetensi-lulusan', 'kompetensiLulusan')->name('kompetensi-lulusan');
+    Route::get('/kontak', 'kontak')->name('kontak');
     Route::get('/absensi', 'absensi')->name('absensi-online');
 });
 

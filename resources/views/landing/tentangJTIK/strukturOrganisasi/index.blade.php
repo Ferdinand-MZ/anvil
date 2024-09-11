@@ -25,6 +25,22 @@
         input[type="checkbox"]:checked + label + .dropdown-content {
             display: block;
         }
+        .accordion-button:not(.collapsed) {
+            color: #0d6efd;
+            
+        }
+
+        .accordion-button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .accordion-collapse {
+            transition: height 0.35s ease;
+        }
+
+        .accordion-body {
+            overflow: hidden;
+        }
 </style>
     <!-- -------- START HEADER 7 w/ text and video ------- -->
     <header class="bg-gradient-dark">
@@ -60,10 +76,16 @@
                         <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8"">
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">
-                                    Struktur Organisasi
+                                    Struktur Organisasi Jurusan Teknologi dan Komputer
                                 </h4>
                             </div>
-
+                            <div style="text-align: center;">
+                                <img 
+                                    src="{{ asset('assets/Img/SO-JMI-1024x692.jpg') }}" 
+                                    alt="Gambar" 
+                                    style="border-radius: 15px; max-width: 100%; height: auto;"
+                                >
+                            </div>
                             {{-- ! Table Manajemen Jurusan Periode 2021-2024 --}}
                             <label for="" class="text text-start fs-6 text-bold">A. Manajemen Jurusan Periode
                                 2021-2024</label>
@@ -223,143 +245,207 @@
                                 tingkat Jurusan sesuai dengan bidang IPTEK yang fokus untuk dikembangkan.
                                 Adapun TUPOKSI elemen-elemen organisasi Jurusan adalah sebagai berikut:
                             </p>
-
-                            {{-- ! Sebagai Ketua Jurusan --}}
-                            <input type="checkbox" id="ketua-jurusan">
-                            <label for="ketua-jurusan" class="text text-start fs-6 text-dark text-bold mt-3">A. Ketua Jurusan</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                    <li>Menyusun rencana dan program kerja Jurusan.</li>
-                                    <li>Membagi tugas kepada Sekretaris Jurusan, Ketua Program Studi, dan Kepala Laboratorium.</li>
-                                    <li>Mengkoordinasikan Ketua Program Studi dan Kepala Laboratorium agar terjalin kerja sama yang baik.</li>
-                                    <li>Menilai prestasi kerja Dosen, Karyawan, dan Teknisi di bidang akademik sebagai dasar pembinaan karier.</li>
-                                    <li>Menyelesaikan masalah-masalah akademik bagi mahasiswa.</li>
-                                    <li>Menyusun konsep petunjuk teknis di bidang Akademik, khususnya penyelenggaraan kurikulum sebagai bahan masukan atasan.</li>
-                                    <li>Menyusun laporan bagian berdasarkan hasil yang telah dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
-                                    <li>Melaksanakan tugas lain yang diberikan oleh pimpinan.</li>
-                                </ol>
-                            </div>
-                            
-                            {{-- ! Sebagai Sekretaris Jurusan --}}
-                            <input type="checkbox" id="sekretaris-jurusan">
-                            <label for="sekretaris-jurusan" class="text text-start fs-6 text-dark text-bold mt-3">B. Sekretaris Jurusan</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Membantu ketua jurusan menyusun rencana dan program kerja.</li>
-                                <li>Menyusun instrumen pemantauan pelaksanaan proses belajar-mengajar sesuai dengan ketentuan yang berlaku.</li>
-                                <li>Menyusun konsep rencana biaya operasional unit.</li>
-                                <li>Menyusun konsep prosedur pengajuan proposal penelitian dan pengabdian kepada masyarakat bagi dosen dan mahasiswa.</li>
-                                <li>Memberi layanan administrasi bagi dosen, mahasiswa, dan pihak luar yang akan melakukan penelitian serta kegiatan akademik lainnya.</li>
-                                <li>Membantu menyusun penilaian SWMP Dosen.</li>
-                                <li>Membantu menyusun konsep laporan pelaksanaan kegiatan berdasarkan data dan informasi sebagai bahan masukan atasan.</li>
-                                <li>Melaksanakan tugas lain yang diberikan oleh atasan.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Ketua Program Studi --}}
-                            <input type="checkbox" id="ketua-program-studi">
-                            <label for="ketua-program-studi" class="text text-start fs-6 text-dark text-bold mt-3">C. Ketua Program Studi</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Menyusun rencana dan program kerja program studi.</li>
-                                <li>Menyusun kurikulum, silabus, buku modul ajar, dan buku modul praktik.</li>
-                                <li>Membagi tugas pengajaran kepada dosen dan teknisi.</li>
-                                <li>Mengevaluasi kegiatan akademik dosen dan mahasiswa.</li>
-                                <li>Menyusun rencana pengembangan program studi serta pengembangan laboratorium sesuai dengan bidang keilmuan program studi.</li>
-                                <li>Menyelesaikan masalah-masalah akademik bagi dosen dan mahasiswa.</li>
-                                <li>Menyusun konsep petunjuk teknis di bidang Akademik, khususnya penyelenggaraan kurikulum sebagai bahan masukan atasan.</li>
-                                <li>Menyusun laporan bagian berdasarkan hasil yang telah dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
-                                <li>Melaksanakan tugas lain yang diberikan oleh pimpinan.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Ketua Laboratorium --}}
-                            <input type="checkbox" id="ketua-laboratorium">
-                            <label for="ketua-laboratorium" class="text text-start fs-6 text-dark text-bold mt-3">D. Ketua Laboratorium</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Menyusun rencana dan program kerja laboratorium sebagai pedoman pelaksanaan tugas.</li>
-                                <li>Menata uraian tugas teknisi dan petugas kebersihan sesuai dengan bidangnya.</li>
-                                <li>Mengorganisasikan, mengkoordinasikan, dan mengevaluasi tugas teknisi serta petugas kebersihan untuk kelancaran pelaksanaan tugas.</li>
-                                <li>Menyusun dan memuat data kebutuhan alat dan bahan praktikum sebagai pedoman pelaksanaan kegiatan.</li>
-                                <li>Menyusun jadwal praktikum laboratorium bersama Ka PS/jurusan sebagai pedoman pelaksanaan kegiatan.</li>
-                                <li>Menyusun jadwal teknisi pembantu praktikum sebagai pedoman pelaksanaan kegiatan.</li>
-                                <li>Memonitor dan mengevaluasi jalannya pelaksanaan praktikum berdasarkan prosedur untuk mengetahui mutu hasil praktikum.</li>
-                                <li>Menata kegiatan administrasi sesuai dengan prosedur untuk kelancaran pelaksanaan tugas.</li>
-                                <li>Menyusun prosedur standard operasional (SOP) pelayanan praktikum laboratorium sebagai pedoman pelaksanaan tugas.</li>
-                                <li>Mengajukan usulan pemeliharaan peralatan dan fasilitas laboratorium untuk kelancaran pelaksanaan tugas.</li>
-                                <li>Membantu program kegiatan penelitian dan pengabdian kepada masyarakat bagi dosen yang sudah disetujui.</li>
-                                <li>Membantu kegiatan tugas akhir mahasiswa.</li>
-                                <li>Mengatur kegiatan usaha dan jasa produksi untuk kelancaran pelaksanaan tugas.</li>
-                                <li>Melakukan pembinaan kepada pegawai di lingkungan laboratorium untuk kelancaran pelaksanaan tugas.</li>
-                                <li>Membuat laporan tengah tahunan sesuai dengan hasil yang dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
-                                <li>Mengatur pelaksanaan kompensasi mahasiswa di Laboratorium.</li>
-                                <li>Melaksanakan tugas-tugas kedinasan lain yang diberikan atasan.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Dosen --}}
-                            <input type="checkbox" id="dosen">
-                            <label for="dosen" class="text text-start fs-6 text-dark text-bold mt-3">E. Dosen</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Melaksanakan pendidikan, penelitian, dan pengabdian kepada masyarakat.</li>
-                                <li>Merencanakan, melaksanakan proses pembelajaran, serta menilai dan mengevaluasi hasil pembelajaran.</li>
-                                <li>Meningkatkan dan mengembangkan kualifikasi akademik dan kompetensi secara berkelanjutan sesuai perkembangan ilmu pengetahuan, teknologi, dan seni.</li>
-                                <li>Bertindak objektif dan tidak diskriminatif atas pertimbangan jenis kelamin, agama, suku, ras, kondisi fisik tertentu, atau latar belakang sosial ekonomi peserta didik dalam pembelajaran.</li>
-                                <li>Menjunjung tinggi peraturan perundang-undangan, hukum, dan kode etik serta nilai-nilai agama dan etika.</li>
-                                <li>Memelihara dan memupuk persatuan dan kesatuan bangsa.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Staf Jurusan --}}
-                            <input type="checkbox" id="staf-jurusan">
-                            <label for="staf-jurusan" class="text text-start fs-6 text-dark text-bold mt-3">F. Staf Jurusan</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Menyusun rencana dan program kerja kegiatan administrasi jurusan.</li>
-                                <li>Membuat, merencanakan, dan melaporkan kebutuhan ATK dan fasilitas Jurusan.</li>
-                                <li>Membuat agenda kegiatan ketua dan sekretaris Jurusan.</li>
-                                <li>Menerima dan mendistribusikan surat masuk dan keluar.</li>
-                                <li>Membuat dan mengecek rekap hasil yudisium tingkat Jurusan.</li>
-                                <li>Mengkoordinasikan program kerja administrasi untuk kegiatan pelatihan/magang Jurusan.</li>
-                                <li>Membuat dan mengoordinasikan pembuatan surat pengantar PKL.</li>
-                                <li>Mengatur pelaksanaan sidang tugas akhir.</li>
-                                <li>Melaksanakan kegiatan pendaftaran ulang mahasiswa lama dan baru.</li>
-                                <li>Mengkoordinasikan dan menjaga soal-soal ujian dalam kondisi aman.</li>
-                                <li>Membantu pekerjaan administrasi dan dokumentasi yang berhubungan dengan kegiatan akademik Jurusan.</li>
-                                <li>Membantu pekerjaan administrasi dan dokumentasi dokumen-dokumen Jurusan.</li>
-                                <li>Membantu pengelolaan database Jurusan.</li>
-                                <li>Melaksanakan tugas-tugas yang diberikan atasan.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Pranata Laboratorium Pendidikan (PLP) --}}
-                            <input type="checkbox" id="plp">
-                            <label for="plp" class="text text-start fs-6 text-dark text-bold mt-3">G. Pranata Laboratorium Pendidikan (PLP)</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Membantu pelaksanaan persiapan Laboratorium tiap semester di bawah petunjuk dan pengarahan Ketua Laboratorium.</li>
-                                <li>Mempersiapkan alat praktikum di Laboratorium masing-masing sesuai kebutuhan praktikum yang dikoordinasikan dengan Ketua Laboratorium.</li>
-                                <li>Membuat berita acara untuk setiap kerusakan/kekurangan/kehilangan alat-alat praktikum dan melaporkan ke Ketua Laboratorium.</li>
-                                <li>Menjaga kebersihan Laboratorium.</li>
-                                <li>Mendampingi Dosen dan Asisten Dosen praktikum dalam membantu pelaksanaan praktikum.</li>
-                                <li>Merawat, menjaga, dan menginventarisasi peralatan Laboratorium.</li>
-                                <li>Menyiapkan bahan dan peralatan yang dipakai praktikum.</li>
-                                <li>Melaksanakan tugas yang diberikan oleh atasan.</li>
-                                <li>Bertanggung jawab kepada atasan langsung.</li>
-                            </ol>
-                            </div>
-                            {{-- ! Sebagai Teknisi --}}
-                            <input type="checkbox" id="teknisi">
-                            <label for="teknisi" class="text text-start fs-6 text-dark text-bold mt-3">H. Teknisi</label>
-                            <div class="dropdown-content">
-                                <ol class="text-start" style="padding-left: 25px;">
-                                <li>Membantu pelaksanaan persiapan Laboratorium tiap semester di bawah petunjuk dan pengarahan Kepala Laboratorium.</li>
-                                <li>Mempersiapkan alat praktikum di Laboratorium masing-masing sesuai kebutuhan praktikum yang dikoordinasikan dengan Kepala Laboratorium.</li>
-                                <li>Membuat berita acara untuk setiap kerusakan/kekurangan/kehilangan alat-alat praktikum dan melaporkan ke Kepala Laboratorium.</li>
-                                <li>Menjaga kebersihan Laboratorium.</li>
-                                <li>Mendampingi Dosen dan Asisten Dosen praktikum dalam membantu pelaksanaan praktikum.</li>
-                                <li>Merawat, menjaga, dan menginventarisasi peralatan Laboratorium.</li>
-                                <li>Menyiapkan bahan dan peralatan yang dipakai praktikum.</li>
-                                <li>Melaksanakan tugas yang diberikan oleh atasan.</li>
-                                <li>Bertanggung jawab kepada atasan langsung.</li>
-                            </ol>
+                            <div class="accordion" id="accordionExample">
+                                <!-- Ketua Jurusan -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            A. Ketua Jurusan
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Menyusun rencana dan program kerja Jurusan.</li>
+                                                <li>Membagi tugas kepada Sekretaris Jurusan, Ketua Program Studi, dan Kepala Laboratorium.</li>
+                                                <li>Mengkoordinasikan Ketua Program Studi dan Kepala Laboratorium agar terjalin kerja sama yang baik.</li>
+                                                <li>Menilai prestasi kerja Dosen, Karyawan, dan Teknisi di bidang akademik sebagai dasar pembinaan karier.</li>
+                                                <li>Menyelesaikan masalah-masalah akademik bagi mahasiswa.</li>
+                                                <li>Menyusun konsep petunjuk teknis di bidang Akademik, khususnya penyelenggaraan kurikulum sebagai bahan masukan atasan.</li>
+                                                <li>Menyusun laporan bagian berdasarkan hasil yang telah dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
+                                                <li>Melaksanakan tugas lain yang diberikan oleh pimpinan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Sekretaris Jurusan -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            B. Sekretaris Jurusan
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Membantu ketua jurusan menyusun rencana dan program kerja.</li>
+                                                <li>Menyusun instrumen pemantauan pelaksanaan proses belajar-mengajar sesuai dengan ketentuan yang berlaku.</li>
+                                                <li>Menyusun konsep rencana biaya operasional unit.</li>
+                                                <li>Menyusun konsep prosedur pengajuan proposal penelitian dan pengabdian kepada masyarakat bagi dosen dan mahasiswa.</li>
+                                                <li>Memberi layanan administrasi bagi dosen, mahasiswa, dan pihak luar yang akan melakukan penelitian serta kegiatan akademik lainnya.</li>
+                                                <li>Membantu menyusun penilaian SWMP Dosen.</li>
+                                                <li>Membantu menyusun konsep laporan pelaksanaan kegiatan berdasarkan data dan informasi sebagai bahan masukan atasan.</li>
+                                                <li>Melaksanakan tugas lain yang diberikan oleh atasan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Ketua Program Studi -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            C. Ketua Program Studi
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Menyusun rencana dan program kerja program studi.</li>
+                                                <li>Menyusun kurikulum, silabus, buku modul ajar, dan buku modul praktik.</li>
+                                                <li>Membagi tugas pengajaran kepada dosen dan teknisi.</li>
+                                                <li>Mengevaluasi kegiatan akademik dosen dan mahasiswa.</li>
+                                                <li>Menyusun rencana pengembangan program studi serta pengembangan laboratorium sesuai dengan bidang keilmuan program studi.</li>
+                                                <li>Menyelesaikan masalah-masalah akademik bagi dosen dan mahasiswa.</li>
+                                                <li>Menyusun konsep petunjuk teknis di bidang Akademik, khususnya penyelenggaraan kurikulum sebagai bahan masukan atasan.</li>
+                                                <li>Menyusun laporan bagian berdasarkan hasil yang telah dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
+                                                <li>Melaksanakan tugas lain yang diberikan oleh pimpinan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Ketua Laboratorium -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            D. Ketua Laboratorium
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Menyusun rencana dan program kerja laboratorium sebagai pedoman pelaksanaan tugas.</li>
+                                                <li>Menata uraian tugas teknisi dan petugas kebersihan sesuai dengan bidangnya.</li>
+                                                <li>Mengorganisasikan, mengkoordinasikan, dan mengevaluasi tugas teknisi serta petugas kebersihan untuk kelancaran pelaksanaan tugas.</li>
+                                                <li>Menyusun dan memuat data kebutuhan alat dan bahan praktikum sebagai pedoman pelaksanaan kegiatan.</li>
+                                                <li>Menyusun jadwal praktikum laboratorium bersama Ka PS/jurusan sebagai pedoman pelaksanaan kegiatan.</li>
+                                                <li>Menyusun jadwal teknisi pembantu praktikum sebagai pedoman pelaksanaan kegiatan.</li>
+                                                <li>Memonitor dan mengevaluasi jalannya pelaksanaan praktikum berdasarkan prosedur untuk mengetahui mutu hasil praktikum.</li>
+                                                <li>Menata kegiatan administrasi sesuai dengan prosedur untuk kelancaran pelaksanaan tugas.</li>
+                                                <li>Menyusun prosedur standard operasional (SOP) pelayanan praktikum laboratorium sebagai pedoman pelaksanaan tugas.</li>
+                                                <li>Mengajukan usulan pemeliharaan peralatan dan fasilitas laboratorium untuk kelancaran pelaksanaan tugas.</li>
+                                                <li>Membantu program kegiatan penelitian dan pengabdian kepada masyarakat bagi dosen yang sudah disetujui.</li>
+                                                <li>Membantu kegiatan tugas akhir mahasiswa.</li>
+                                                <li>Mengatur kegiatan usaha dan jasa produksi untuk kelancaran pelaksanaan tugas.</li>
+                                                <li>Melakukan pembinaan kepada pegawai di lingkungan laboratorium untuk kelancaran pelaksanaan tugas.</li>
+                                                <li>Membuat laporan tengah tahunan sesuai dengan hasil yang dicapai sebagai pertanggungjawaban pelaksanaan tugas.</li>
+                                                <li>Mengatur pelaksanaan kompensasi mahasiswa di Laboratorium.</li>
+                                                <li>Melaksanakan tugas-tugas kedinasan lain yang diberikan atasan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Dosen -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            E. Dosen
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Melaksanakan pendidikan, penelitian, dan pengabdian kepada masyarakat.</li>
+                                                <li>Merencanakan, melaksanakan proses pembelajaran, serta menilai dan mengevaluasi hasil pembelajaran.</li>
+                                                <li>Meningkatkan dan mengembangkan kualifikasi akademik dan kompetensi secara berkelanjutan sesuai perkembangan ilmu pengetahuan, teknologi, dan seni.</li>
+                                                <li>Bertindak objektif dan tidak diskriminatif atas pertimbangan jenis kelamin, agama, suku, ras, kondisi fisik, dan status sosial ekonomi peserta didik.</li>
+                                                <li>Menyusun laporan hasil proses belajar-mengajar berdasarkan data dan informasi sebagai bahan masukan atasan.</li>
+                                                <li>Mengatur kegiatan pelatihan dan pengabdian masyarakat sesuai dengan kompetensi.</li>
+                                                <li>Melaksanakan tugas-tugas yang diberikan oleh atasan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Staf Jurusan -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            F. Staf Jurusan
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Menyusun rencana dan program kerja kegiatan administrasi jurusan.</li>
+                                                <li>Membuat, merencanakan, dan melaporkan kebutuhan ATK dan fasilitas Jurusan.</li>
+                                                <li>Membuat agenda kegiatan ketua dan sekretaris Jurusan.</li>
+                                                <li>Menerima dan mendistribusikan surat masuk dan keluar.</li>
+                                                <li>Membuat dan mengecek rekap hasil yudisium tingkat Jurusan.</li>
+                                                <li>Mengkoordinasikan program kerja administrasi untuk kegiatan pelatihan/magang Jurusan.</li>
+                                                <li>Membuat dan mengoordinasikan pembuatan surat pengantar PKL.</li>
+                                                <li>Mengatur pelaksanaan sidang tugas akhir.</li>
+                                                <li>Melaksanakan kegiatan pendaftaran ulang mahasiswa lama dan baru.</li>
+                                                <li>Mengkoordinasikan dan menjaga soal-soal ujian dalam kondisi aman.</li>
+                                                <li>Membantu pekerjaan administrasi dan dokumentasi yang berhubungan dengan kegiatan akademik Jurusan.</li>
+                                                <li>Membantu pekerjaan administrasi dan dokumentasi dokumen-dokumen Jurusan.</li>
+                                                <li>Membantu pengelolaan database Jurusan.</li>
+                                                <li>Melaksanakan tugas-tugas yang diberikan atasan.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Pranata Laboratorium Pendidikan (PLP) -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSeven">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                            G. Pranata Laboratorium Pendidikan (PLP)
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Membantu pelaksanaan persiapan Laboratorium tiap semester di bawah petunjuk dan pengarahan Ketua Laboratorium.</li>
+                                                <li>Mempersiapkan alat praktikum di Laboratorium masing-masing sesuai kebutuhan praktikum yang dikoordinasikan dengan Ketua Laboratorium.</li>
+                                                <li>Membuat berita acara untuk setiap kerusakan/kekurangan/kehilangan alat-alat praktikum dan melaporkan ke Ketua Laboratorium.</li>
+                                                <li>Menjaga kebersihan Laboratorium.</li>
+                                                <li>Mendampingi Dosen dan Asisten Dosen praktikum dalam membantu pelaksanaan praktikum.</li>
+                                                <li>Merawat, menjaga, dan menginventarisasi peralatan Laboratorium.</li>
+                                                <li>Menyiapkan bahan dan peralatan yang dipakai praktikum.</li>
+                                                <li>Melaksanakan tugas yang diberikan oleh atasan.</li>
+                                                <li>Bertanggung jawab kepada atasan langsung.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Teknisi -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEight">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                            H. Teknisi
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Membantu pelaksanaan persiapan Laboratorium tiap semester di bawah petunjuk dan pengarahan Kepala Laboratorium.</li>
+                                                <li>Mempersiapkan alat praktikum di Laboratorium masing-masing sesuai kebutuhan praktikum yang dikoordinasikan dengan Kepala Laboratorium.</li>
+                                                <li>Membuat berita acara untuk setiap kerusakan/kekurangan/kehilangan alat-alat praktikum dan melaporkan ke Kepala Laboratorium.</li>
+                                                <li>Menjaga kebersihan Laboratorium.</li>
+                                                <li>Mendampingi Dosen dan Asisten Dosen praktikum dalam membantu pelaksanaan praktikum.</li>
+                                                <li>Merawat, menjaga, dan menginventarisasi peralatan Laboratorium.</li>
+                                                <li>Menyiapkan bahan dan peralatan yang dipakai praktikum.</li>
+                                                <li>Melaksanakan tugas yang diberikan oleh atasan.</li>
+                                                <li>Bertanggung jawab kepada atasan langsung.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

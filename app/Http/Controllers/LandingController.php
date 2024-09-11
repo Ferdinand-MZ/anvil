@@ -67,11 +67,28 @@ class LandingController extends Controller
     }
 
     public function fasilitas(): View
-{
-    $fasilitas = Fasilitas::all();
-    return view('landing.tentangJTIK.fasilitas.findex', [
-        'title' => 'JTIK POLSUB | Fasilitas',
-        'fasilitas' => $fasilitas
-    ]);
-}
+    {
+        $fasilitas = Fasilitas::all();
+        return view('landing.tentangJTIK.fasilitas.index', [
+            'title' => 'JTIK POLSUB | Fasilitas Kami',
+            'fasilitas' => $fasilitas
+        ]);
+    }
+
+    public function kompetensiLulusan(): View
+    {
+        return view('landing.tentangJTIK.kompetensiLulusan.index', [
+            'title' => 'JTIK POLSUB | Kompetensi Lulusan',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
+    public function kontak(): View
+    {
+        return view('landing.kontak.index', [
+            'title' => 'JTIK POLSUB | Kontak Kami',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
 }

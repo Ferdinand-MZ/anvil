@@ -1,5 +1,4 @@
 @extends('layouts._default.guest')
-
 @section('content')
   <!-- -------- START HEADER 7 w/ text and video ------- -->
   <header class="bg-gradient-dark">
@@ -8,7 +7,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
-            <h1 class="text-white">Fasilitas</h1>
+            <h1 class="text-white">FASILITAS</h1>
           </div>
         </div>
       </div>
@@ -21,10 +20,10 @@
       <div id="fasilitasCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           @foreach ($fasilitas as $index => $item)
-            <div class="carousel-item @if($index == 0) active @endif">
-              <img src="{{ asset($item->photo) }}" class="d-block w-100 img-fluid" alt="{{ $item->nama }}" style="max-height: 500px; object-fit: cover;">
+            <div class="px-6 carousel-item @if($index == 0) active @endif">
+              <img src="{{ asset($item->photo) }}" class="d-block w-100 img-fluid" alt="{{ $item->nama }}" style="max-height: 500px; object-fit: cover; border-radius: 25px;">
               <div class="carousel-caption d-none d-md-block">
-                <h5>{{ $item->nama }}</h5>
+                <h5 class="text text-white fs-3">{{ $item->nama }}</h5>
               </div>
             </div>
           @endforeach

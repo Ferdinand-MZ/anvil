@@ -6,19 +6,12 @@
             <span class="mask bg-gradient-dark opacity-6"></span>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center mx-auto my-auto">
-                        <h1 class="text-white">JURUSAN TEKNOLOGI & INFORMASI</h1>
+                    <div class="col-lg-8 text-center mx-auto my-auto position-relative">
+                        <h1 class="text-white position-relative">JURUSAN TEKNOLOGI & INFORMASI
+                            <div class="line"></div>
+                        </h1>
                         <p class="lead mb-4 text-white opacity-8">Yes we're HIMATIKOM, Always is the best, Always in my
                             souls, Never surrender. Our pride our family.</p>
-                        <h6 class="text-white mb-2 mt-5">Find Us</h6>
-                        <div class="d-flex justify-content-center">
-                            <a href="https://www.instagram.com/himatikom.polsub/" target="_blank"><i
-                                    class="fab fa-instagram text-lg text-white me-4"></i></a>
-                            <a href="https://www.tiktok.com/@himatikom_polsub" target="_blank"><i
-                                    class="fab fa-tiktok text-lg text-white me-4"></i></a>
-                            <a href="https://www.youtube.com/@mipolsubofficial7516" target="_blank"><i
-                                    class="fab fa-youtube text-lg text-white"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -2,12 +2,14 @@
 <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
     <div class="container">
         <a
-            class="navbar-brand  text-white "
+            class="navbar-brand d-flex align-items-center text-white bg-black"
             href="/"
-            title="Designed and Coded by Creative Tim"
+            title="Politeknik Negeri Subang"
         >
+            <img src="{{ asset('logo/logoPOLSUB-HD.png') }}" alt="Logo" style="height: 40px; width: auto;" class="me-2">
             JTIK POLSUB
         </a>
+
         <button
             class="navbar-toggler shadow-none ms-2"
             type="button"
@@ -28,6 +30,11 @@
             id="navigation"
         >
             <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item mx-2 ms-lg-3">
+                    <a href="{{ route('landing') }}" class="nav-link ps-2 d-flex align-items-center">
+                        Beranda
+                    </a>
+                </li>
                 <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-3">
                     <a
                         class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
@@ -35,7 +42,7 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
+                        
                         Tentang JTIK
                         <img
                             src="{{ asset('material-kit') }}/assets/img/down-arrow-white.svg"
@@ -84,7 +91,7 @@
                                 <span>Fasilitas</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? '#feedback' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'kompetensi-lulusan' ? '#feedback' : route('kompetensi-lulusan') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Kompetensi Lulusan</span>
@@ -95,40 +102,34 @@
                                 href="#visi-misi"
                                 class="dropdown-item border-radius-md mb-2"
                             >
-                                <span>Visi</span>
+                                <span>Visi & Misi</span>
                             </a>
                             <a
-                                href="#our_team"
-                                class="dropdown-item border-radius-md mb-2"
-                            >
-                                <span>Misi</span>
-                            </a>
-                            <a
-                                href="#feedback"
+                                href="#tujuan"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Tujuan</span>
                             </a>
                             <a
-                                href="#feedback"
+                                href="#riwayat-singkat"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Riwayat Singkat</span>
                             </a>
                             <a
-                                href="#feedback"
+                                href="#struktur-organisasi"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Struktur Organisasi</span>
                             </a>
                             <a
-                                href="#feedback"
+                                href="#fasilitas"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Fasilitas</span>
                             </a>
                             <a
-                                href="#feedback"
+                                href="#kompetensi-lulusan"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Kompetensi Lulusan</span>
@@ -143,7 +144,6 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
                         Program Studi
                         <img
                             src="{{ asset('material-kit') }}/assets/img/down-arrow-white.svg"
@@ -189,6 +189,22 @@
                             </a>
                         </div>
                     </div>
+                </li>
+                <li class="nav-item mx-2 ms-lg-3">
+                <li class="nav-item mx-2 ms-lg-3">
+                    <a href="{{ route('landing') }}" class="nav-link ps-2 d-flex align-items-center">
+                        Berita
+                    </a>
+                </li>
+                <li class="nav-item mx-2 ms-lg-3">
+                    <a href="https://polsub.ac.id" class="nav-link ps-2 d-flex align-items-center">
+                        Polsub
+                    </a>
+                </li>
+                <li class="nav-item mx-2 ms-lg-3">
+                    <a href="{{ route('kontak') }}" class="nav-link ps-2 d-flex align-items-center">
+                        Kontak
+                    </a>
                 </li>
                 @auth
                 <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-3">
