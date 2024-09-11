@@ -64,4 +64,13 @@ class LandingController extends Controller
             'biro_departments' => BiroDepartment::all() 
         ]);
     }
+
+    public function fasilitas(): View
+    {
+        return view('landing.tentangJTIK.fasilitas.findex', [
+            'title' => 'JTIK POLSUB | Struktur Organisasi',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
 }

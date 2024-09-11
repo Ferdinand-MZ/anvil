@@ -28,6 +28,7 @@ Route::controller(LandingController::class)->group(function () {
     Route::get('/tujuan', 'tujuan')->name('tujuan');
     Route::get('/riwayat-singkat', 'riwayatSingkat')->name('riwayat-singkat');
     Route::get('/struktur-organisasi', 'strukturOrganisasi')->name('struktur-organisasi');
+    Route::get('/fasilitas', 'fasilitas')->name('fasilitas');
     Route::get('/absensi', 'absensi')->name('absensi-online');
 });
 

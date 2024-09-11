@@ -78,7 +78,7 @@
                                 <span>Struktur Organisasi</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? '#feedback' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'fasilitas' ? '#feedback' : route('fasilitas') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Fasilitas</span>
