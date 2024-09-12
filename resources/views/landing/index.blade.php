@@ -10,8 +10,11 @@
                         <h1 class="text-white position-relative">JURUSAN TEKNOLOGI & INFORMASI
                             <div class="line"></div>
                         </h1>
-                        <p class="lead mb-4 text-white opacity-8">Yes we're HIMATIKOM, Always is the best, Always in my
-                            souls, Never surrender. Our pride our family.</p>
+                        <p class="lead mb-4 text-white opacity-8">Yes we are HIMATIKOM.
+                            <br>
+                            Always is the best, Always in my souls, Never surrender.
+                            <br>
+                            Our pride our family.</p>
                     </div>
                 </div>
             </div>

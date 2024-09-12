@@ -32,6 +32,8 @@ Route::controller(LandingController::class)->group(function () {
     Route::get('/kompetensi-lulusan', 'kompetensiLulusan')->name('kompetensi-lulusan');
     Route::get('/kontak', 'kontak')->name('kontak');
     Route::get('/absensi', 'absensi')->name('absensi-online');
+    Route::get('/sistem-informasi', 'sistemInformasi')->name('sistem-informasi');
+    Route::get('/teknik-rpl', 'teknikRPL')->name('teknik-rpl');
 });
 
 Route::controller(DashboardController::class)->middleware('auth')->middleware('check-status:pengurus,admin')->group(function () {

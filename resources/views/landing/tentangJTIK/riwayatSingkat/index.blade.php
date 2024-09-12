@@ -12,7 +12,7 @@
                 <div class="col-lg-8 text-center mx-auto my-auto">
                     <h1 class="text-white">RIWAYAT SINGKAT</h1>
                     <p class="lead mb-4 text-white opacity-8"></p>
-                    <h6 class="text-white mb-2 mt-5">Find Us</h6>
+                    {{-- <h6 class="text-white mb-2 mt-5">Find Us</h6>
                     <div class="d-flex justify-content-center">
                         <a
                             href="https://www.instagram.com/himatikom.polsub/"
@@ -26,7 +26,7 @@
                             href="https://www.youtube.com/@mipolsubofficial7516"
                             target="_blank"
                         ><i class="fab fa-youtube text-lg text-white"></i></a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

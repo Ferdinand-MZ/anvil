@@ -91,4 +91,20 @@ class LandingController extends Controller
             'biro_departments' => BiroDepartment::all() 
         ]);
     }
+    public function sistemInformasi(): View
+    {
+        return view('landing.programStudi.si_index', [
+            'title' => 'JTIK POLSUB | Kontak Kami',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
+    public function teknikRPL(): View
+    {
+        return view('landing.programStudi.trpl_index', [
+            'title' => 'JTIK POLSUB | Kontak Kami',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
 }

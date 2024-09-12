@@ -162,7 +162,7 @@
                     >
                         <div class="d-none d-lg-block">
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? '#octagram' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'landing' ? 'sistem-informasi' : route('landing') }}"
                                 class="dropdown-item border-radius-md mt-2 mb-2"
                             >
                                 <span>D-III Sistem Informasi</span>
@@ -176,13 +176,13 @@
                         </div>
                         <div class="d-lg-none">
                             <a
-                                href="#octagram"
+                                href="{{ route('sistem-informasi') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>D-III Sistem Informasi</span>
                             </a>
                             <a
-                                href="#our_team"
+                                href="{{ route('teknik-rpl') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>D-IV Teknologi Rekayasa Perangkat Lunak</span>
