@@ -7,15 +7,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center mx-auto my-auto position-relative">
-                        <h1 class="text-white position-relative">JURUSAN TEKNOLOGI & INFORMASI
+                        <h1 class="text-white position-relative">D-III Sistem Informasi
                             <div class="line"></div>
                         </h1>
-                        <p class="lead mb-4 text-white opacity-8">Yes we are HIMATIKOM.
+                        {{-- <p class="lead mb-4 text-white opacity-8">Yes we are HIMATIKOM.
                             <br>
                             Always is the best, Always in my souls, Never surrender.
                             <br>
                             Our pride our family.
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>
