@@ -93,16 +93,16 @@ class LandingController extends Controller
     }
     public function sistemInformasi(): View
     {
-        return view('landing.programStudi.si_index', [
-            'title' => 'JTIK POLSUB | Kontak Kami',
+        return view('landing.programStudi.sistemInformasi.si_index', [
+            'title' => 'JTIK POLSUB | Sistem Informasi',
             'pengurus_harians' => PengurusHarian::all(),
             'biro_departments' => BiroDepartment::all() 
         ]);
     }
     public function teknikRPL(): View
     {
-        return view('landing.programStudi.trpl_index', [
-            'title' => 'JTIK POLSUB | Kontak Kami',
+        return view('landing.programStudi.teknologiRekayasaPerangkatLunak.trpl_index', [
+            'title' => 'JTIK POLSUB | Teknik Rekayasa Perangkat Lunak',
             'pengurus_harians' => PengurusHarian::all(),
             'biro_departments' => BiroDepartment::all() 
         ]);

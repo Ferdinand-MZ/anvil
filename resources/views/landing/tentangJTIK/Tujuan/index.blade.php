@@ -51,7 +51,7 @@
                             <p class="mb-0 text-start">
                                 1. Menghasilkan tenaga profesional di bidang manajemen informatika yang memiliki sikap dan kemampuan sebagai berikut:
                             </p>
-                            <ul class="text-start" style="list-style: none; padding-left: 30;">
+                            <ul class="text-start" style="list-style: none; padding-left: 30px;">
                                 <li>a. Beradaptasi terhadap perkembangan teknologi informasi</li>
                                 <li>b. Berfikir kreatif, analitis, dan sistematis</li>
                                 <li>c. Berwirausaha</li>

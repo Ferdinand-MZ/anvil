@@ -162,13 +162,13 @@
                     >
                         <div class="d-none d-lg-block">
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? 'sistem-informasi' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'sistem-informasi' ? 'sistem-informasi' : route('sistem-informasi') }}"
                                 class="dropdown-item border-radius-md mt-2 mb-2"
                             >
                                 <span>D-III Sistem Informasi</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? 'teknik-rpl' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'teknik-rpl' ? 'teknik-rpl' : route('teknik-rpl') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>D-IV Teknologi Rekayasa Perangkat Lunak</span>
