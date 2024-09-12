@@ -168,7 +168,7 @@
                                 <span>D-III Sistem Informasi</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'landing' ? '#our_team' : route('landing') }}"
+                                href="{{ request()->route()->getName() == 'landing' ? 'teknik-rpl' : route('landing') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>D-IV Teknologi Rekayasa Perangkat Lunak</span>
