@@ -47,6 +47,33 @@
             border-bottom: 2px solid #0B2F9F;
         }
 
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+            /* Prevents the circle from shrinking */
+        }
+
+        .d-block {
+            margin-top: 2px;
+        }
+
+        /* Adjust margin and padding for label and anchor */
+        .form-label {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding-left: 0;
+            text-decoration: none;
+        }
     </style>
     @include('layouts.partials._navbar-guest')
 

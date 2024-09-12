@@ -102,10 +102,10 @@
                                                     <h5 class="card-title mb-2">{{ $pengurus_harian->name }}</h5>
                                                     <p class="card-text text-secondary">{{ $pengurus_harian->description }}
                                                     </p>
-                                                    <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                                                    <a href="#" class="btn btn-primary mt-2">Baca Selengkapnya</a>
                                                 </div>
-                                                <div class="card-footer text-muted">
-                                                    {{ $pengurus_harian->date ?? 'Tanggal Tidak Diketahui' }}
+                                                <div class="card-footer text-muted text-end">
+                                                    {{ $pengurus_harian->date ?? '11 September 2024' }}
                                                 </div>
                                             </div>
                                         </div>
