@@ -80,7 +80,7 @@
         </section>
         <!-- END Section with four info areas left & one card right with image and waves -->
         <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-        <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="our_team">
+        <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="our_team" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 mb-5 mt-5">

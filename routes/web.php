@@ -30,6 +30,7 @@ Route::controller(LandingController::class)->group(function () {
     Route::get('/struktur-organisasi', 'strukturOrganisasi')->name('struktur-organisasi');
     Route::get('/fasilitas-2024', 'fasilitas')->name('fasilitas');
     Route::get('/kompetensi-lulusan', 'kompetensiLulusan')->name('kompetensi-lulusan');
+    Route::get('/himpunan', 'himpunan')->name('himpunan');
     Route::get('/kontak', 'kontak')->name('kontak');
     Route::get('/absensi', 'absensi')->name('absensi-online');
     Route::get('/sistem-informasi', 'sistemInformasi')->name('sistem-informasi');

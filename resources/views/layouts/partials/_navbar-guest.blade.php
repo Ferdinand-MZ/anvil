@@ -1,5 +1,5 @@
 <!-- Navbar Transparent -->
-<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent fixed-top">
     <div class="container">
         <a
             class="navbar-brand d-flex align-items-center text-white bg-black"
@@ -61,78 +61,90 @@
                     >
                         <div class="d-none d-lg-block">
                             <a
-                                href="{{ request()->route()->getName() == 'visi-misi' ? '#octagram' : route('visi-misi') }}"
+                                href="{{ request()->route()->getName() == 'visi-misi' ? '#visi-misi' : route('visi-misi') }}"
                                 class="dropdown-item border-radius-md mt-2 mb-2"
                             >
                                 <span>Visi & Misi</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'tujuan' ? '#feedback' : route('tujuan') }}"
+                                href="{{ request()->route()->getName() == 'tujuan' ? '#tujuan' : route('tujuan') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Tujuan</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'riwayat-singkat' ? '#feedback' : route('riwayat-singkat') }}"
+                                href="{{ request()->route()->getName() == 'riwayat-singkat' ? '#riwayat-singkat' : route('riwayat-singkat') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Riwayat Singkat</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'struktur-organisasi' ? '#feedback' : route('struktur-organisasi') }}"
+                                href="{{ request()->route()->getName() == 'struktur-organisasi' ? '#struktur-organisasi' : route('struktur-organisasi') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Struktur Organisasi</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'fasilitas' ? '#feedback' : route('fasilitas') }}"
+                                href="{{ request()->route()->getName() == 'fasilitas' ? '#Fasilitas' : route('fasilitas') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Fasilitas</span>
                             </a>
                             <a
-                                href="{{ request()->route()->getName() == 'kompetensi-lulusan' ? '#feedback' : route('kompetensi-lulusan') }}"
+                                href="{{ request()->route()->getName() == 'kompetensi-lulusan' ? '#kompetensi-lulusan' : route('kompetensi-lulusan') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Kompetensi Lulusan</span>
                             </a>
+                            <a
+                                href="{{ request()->route()->getName() == 'himpunan' ? '#himpunan' : route('himpunan') }}"
+                                class="dropdown-item border-radius-md mb-2"
+                            >
+                                <span>Himpunan</span>
+                            </a>
                         </div>
                         <div class="d-lg-none">
                             <a
-                                href="#visi-misi"
+                                href="{{ route('visi-misi') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Visi & Misi</span>
                             </a>
                             <a
-                                href="#tujuan"
+                                href="{{ route('tujuan') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Tujuan</span>
                             </a>
                             <a
-                                href="#riwayat-singkat"
+                                href="{{ route('riwayat-singkat') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Riwayat Singkat</span>
                             </a>
                             <a
-                                href="#struktur-organisasi"
+                                href="{{ route('struktur-organisasi') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Struktur Organisasi</span>
                             </a>
                             <a
-                                href="#fasilitas"
+                                href="{{ route('fasilitas') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Fasilitas</span>
                             </a>
                             <a
-                                href="#kompetensi-lulusan"
+                                href="{{ route('kompetensi-lulusan') }}"
                                 class="dropdown-item border-radius-md mb-2"
                             >
                                 <span>Kompetensi Lulusan</span>
+                            </a>
+                            <a
+                                href="{{ route('himpunan') }}"
+                                class="dropdown-item border-radius-md mb-2"
+                            >
+                                <span>Himpunan</span>
                             </a>
                         </div>
                     </div>
@@ -190,7 +202,6 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item mx-2 ms-lg-3">
                 <li class="nav-item mx-2 ms-lg-3">
                     <a href="{{ route('landing') }}" class="nav-link ps-2 d-flex align-items-center">
                         Berita

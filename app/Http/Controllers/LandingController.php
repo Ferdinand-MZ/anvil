@@ -83,6 +83,15 @@ class LandingController extends Controller
             'biro_departments' => BiroDepartment::all() 
         ]);
     }
+
+    public function himpunan(): View
+    {
+        return view('landing.tentangJTIK.himpunan.index', [
+            'title' => 'JTIK POLSUB | Himpunan',
+            'pengurus_harians' => PengurusHarian::all(),
+            'biro_departments' => BiroDepartment::all() 
+        ]);
+    }
     public function kontak(): View
     {
         return view('landing.kontak.index', [

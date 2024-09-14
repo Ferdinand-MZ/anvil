@@ -11,22 +11,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mx-auto my-auto">
                     <h1 class="text-white">VISI & MISI</h1>
-                    {{-- <p class="lead mb-4 text-white opacity-8"></p>
-                    <h6 class="text-white mb-2 mt-5">Find Us</h6>
-                    <div class="d-flex justify-content-center">
-                        <a
-                            href="https://www.instagram.com/himatikom.polsub/"
-                            target="_blank"
-                        ><i class="fab fa-instagram text-lg text-white me-4"></i></a>
-                        <a
-                            href="https://www.tiktok.com/@himatikom_polsub"
-                            target="_blank"
-                        ><i class="fab fa-tiktok text-lg text-white me-4"></i></a>
-                        <a
-                            href="https://www.youtube.com/@mipolsubofficial7516"
-                            target="_blank"
-                        ><i class="fab fa-youtube text-lg text-white"></i></a>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -41,7 +25,7 @@
     >
         <div class="container">
             <div class="row ">
-                <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
+                <div class="col-12 col-lg-6  ms-auto mt-lg-0 mt-4">
                     <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8">
                         <div class="card-body text-center">
                             <h4 class="font-weight-bold">
@@ -54,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
+                    <div class="col-12 col-lg-6  ms-auto mt-lg-0 mt-4">
                         <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8" >
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">
