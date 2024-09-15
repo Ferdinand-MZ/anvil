@@ -66,6 +66,11 @@ class SidebarApp extends Component
                         'url' => 'proker-agenda.agenda',
                         'slug_name' => 'agenda',
                     ],
+                    [
+                        'name' => 'Penulisan Berita',
+                        'url' => 'proker-agenda.berita',
+                        'slug_name' => 'berita',
+                    ],
                 ]
             ],
             [
