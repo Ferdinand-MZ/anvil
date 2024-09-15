@@ -26,7 +26,7 @@
                                     <th style="text-align: center; vertical-align: middle;">Nomer</th>
                                     <th style="text-align: center; vertical-align: middle;">Gambar</th>
                                     <th style="text-align: center; vertical-align: middle;">Judul</th>
-                                    <th style="text-align: center; vertical-align: middle;">Isi</th>
+                                    {{-- <th style="text-align: center; vertical-align: middle;">Isi</th> --}}
                                     <th style="text-align: center; vertical-align: middle;">Tanggal</th>
                                     <th style="text-align: center; vertical-align: middle;">Aksi</th>
                                 </tr>
@@ -40,24 +40,25 @@
                                 <tr>
                                     <td style="text-align: center; vertical-align: middle;">{{ $no++ }}</td>
                                     <td style="text-align: center; vertical-align: middle;">
-                                        {{ asset('storage/berita'. $item->foto) }}
+                                        <img src="{{ Storage::url('artikel/' . $berita->foto) }}" alt="Foto">
                                     </td>
                                     <td style="text-align: center; vertical-align: middle;">{{ $berita->judul}}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $berita->created_at}}</td>
+                                    {{-- <td style="text-align: center; vertical-align: middle;">{{ $berita->isi}}</td> --}}
                                     {{-- <td style="text-align: center; vertical-align: middle;">{{ $berita->biro_department->name }}</td> --}}
                                     <td style="text-align: center; vertical-align: middle;">
                                         <a
-                                            href="#"
-                                            class="badge badge-sm btn-warning"
+                                            href="{{ route('halaman-artikel.edit', $berita->id) }}"
+                                            class="btn btn-warning btn-sm me-2"
                                         >Edit</a>
-                                        {{-- <a
-                                            href="{{ route('berita-agenda.berita.detail', ['uuid' => $berita->uuid]) }}"
-                                            class="badge badge-sm btn-primary"
-                                        >Detail</a> --}}
+                                        <form action="{{ route('halaman-artikel.destroy', $berita->id) }}" method="POST" class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                        </form>
                                     </td>
-                                    <form action="" method="POST" class="d-inline">
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger">Hapus</button>
-                                    </form>
+                                    
+                                    
                                 </tr>
                                 @endforeach
                             </tbody>

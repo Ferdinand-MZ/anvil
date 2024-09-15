@@ -22,6 +22,7 @@ use App\Http\Controllers\EventAbsenceController;
 |
 */
 
+
 Route::controller(LandingController::class)->group(function () {
     Route::get('/', 'index')->name('landing');
     Route::get('/my-profile', 'profile')->name('my-profile')->middleware('auth');
