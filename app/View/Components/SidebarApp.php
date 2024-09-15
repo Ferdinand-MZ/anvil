@@ -50,10 +50,10 @@ class SidebarApp extends Component
                 ]
             ],
             [
-                'name' => 'Berita',
+                'name' => 'Halaman Artikel',
                 'icon' => '<i class="bi bi-newspaper"></i>',
-                'url' => 'berita',
-                'slug_name' => 'berita',
+                'url' => 'halaman-artikel',
+                'slug_name' => 'halaman-artikel',
                 'access' => ['admin', 'pengurus'],
             ],            
             [
@@ -73,11 +73,11 @@ class SidebarApp extends Component
                         'url' => 'proker-agenda.agenda',
                         'slug_name' => 'agenda',
                     ],
-                    [
-                        'name' => 'Penulisan Berita',
-                        'url' => 'proker-agenda.berita',
-                        'slug_name' => 'berita',
-                    ],
+                    // [
+                    //     'name' => 'Penulisan Berita',
+                    //     'url' => 'proker-agenda.berita',
+                    //     'slug_name' => 'berita',
+                    // ],
                 ]
             ],
             [

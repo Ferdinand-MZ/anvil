@@ -13,56 +13,54 @@
                 <div class="card-body">
 
                     <div class="d-flex flex-wrap gap-1 mb-3">
-                        <a
-                            href="{{ route('proker-agenda.proker.tambah') }}"
-                            class="btn btn-sm btn-success"
-                        >Buat Artikel</a>
+                        <a href="{{ route('halaman-artikel.create') }}" class="btn btn-sm btn-success">Buat Artikel</a>
                     </div>
 
                     <div class="table-responsive">
                         <table
                             class="table v-middle"
-                            id="table_proker"
+                            id="table_berita"
                         >
                             <thead>
                                 <tr>
-                                    <th style="text-align: center; vertical-align: middle;">Dibuat Oleh</th>
-                                    <th style="text-align: center; vertical-align: middle;">Nama</th>
-                                    <th style="text-align: center; vertical-align: middle;">Dari</th>
-                                    <th style="text-align: center; vertical-align: middle;">Status</th>
-                                    <th style="text-align: center; vertical-align: middle;">Tanggal Acara</th>
-                                    <th style="text-align: center; vertical-align: middle;">Tanggal Mulai</th>
-                                    <th style="text-align: center; vertical-align: middle;">Tanggal Selesai</th>
+                                    <th style="text-align: center; vertical-align: middle;">Nomer</th>
+                                    <th style="text-align: center; vertical-align: middle;">Gambar</th>
+                                    <th style="text-align: center; vertical-align: middle;">Judul</th>
+                                    <th style="text-align: center; vertical-align: middle;">Isi</th>
+                                    <th style="text-align: center; vertical-align: middle;">Tanggal</th>
                                     <th style="text-align: center; vertical-align: middle;">Aksi</th>
                                 </tr>
                             </thead>
-                            {{-- <tbody>
-                                @foreach ($prokers as $key => $proker)
+                            <tbody>
+                                @php
+                                    $no = 1;
+                                @endphp
+
+                                @foreach ($beritas as $berita)
                                 <tr>
-                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->user->name }}</td>
-                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->name }}</td>
-                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->biro_department->name }}</td>
-                                    <td style="text-align: center; vertical-align: middle;">{{ ucfirst($proker->status) }}</td>
-                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->event_day }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $no++ }}</td>
                                     <td style="text-align: center; vertical-align: middle;">
-                                        {{ $proker->event_start ? substr($proker->event_start, 0, 10) : 'Belum dimulai' }}
+                                        {{ asset('storage/berita'. $item->foto) }}
                                     </td>
-                                    <td style="text-align: center; vertical-align: middle;">
-                                        {{ $proker->event_finish ? substr($proker->event_finish, 0, 10) : 'Belum Selesai' }}
-                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $berita->judul}}</td>
+                                    {{-- <td style="text-align: center; vertical-align: middle;">{{ $berita->biro_department->name }}</td> --}}
                                     <td style="text-align: center; vertical-align: middle;">
                                         <a
                                             href="#"
                                             class="badge badge-sm btn-warning"
                                         >Edit</a>
-                                        <a
-                                            href="{{ route('proker-agenda.proker.detail', ['uuid' => $proker->uuid]) }}"
+                                        {{-- <a
+                                            href="{{ route('berita-agenda.berita.detail', ['uuid' => $berita->uuid]) }}"
                                             class="badge badge-sm btn-primary"
-                                        >Detail</a>
+                                        >Detail</a> --}}
                                     </td>
+                                    <form action="" method="POST" class="d-inline">
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+                                    </form>
                                 </tr>
                                 @endforeach
-                            </tbody> --}}
+                            </tbody>
                         </table>
                     </div>
 
@@ -76,7 +74,7 @@
 <!-- Content wrapper end -->
 
 <script>
-    new DataTable('#table_proker');
+    new DataTable('#table_berita');
 </script>
 
 @endsection

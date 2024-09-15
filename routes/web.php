@@ -70,15 +70,21 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::controller(BeritaController::class)->middleware('auth')->middleware('check-status:pengurus,admin')->group(function () {
-    Route::get('/beritas', 'berita')->name('berita');
-    // Route::get('/proker-agenda/program-kerja/tambah', 'tambah_proker')->name('proker-agenda.proker.tambah');
+    Route::get('/halaman-artikel', 'index')->name('halaman-artikel');
+    Route::get('/halaman-artikel/create', 'create')->name('halaman-artikel.create');
+    Route::post('/halaman-artikel/store', 'store')->name('halaman-artikel.store');
+    Route::get('/halaman-artikel/edit/{id}', 'edit')->name('halaman-artikel.edit');
+    Route::post('/halaman-artikel/update/{id}', 'update')->name('halaman-artikel.update');
+    Route::post('/halaman-artikel/destroy/{id}', 'destroy')->name('halaman-artikel.destroy');
+});
+
+// Route::get('/proker-agenda/program-kerja/tambah', 'tambah_proker')->name('proker-agenda.proker.tambah');
     // Route::get('/proker-agenda/program-kerja/detail/{uuid}', 'detail')->name('proker-agenda.proker.detail');
 
     // Route::get('/proker-agenda/agenda', 'agenda')->name('proker-agenda.agenda');
 
     // Route::post('/proker-agenda/program-kerja/store', 'store_proker')->name('proker-agenda.proker.store');
     // Route::get('/proker-agenda/berita', 'berita_proker')->name('proker-agenda.berita');
-});
 
 Route::controller(EventAbsenceController::class)->group(function () {
     Route::post('/proker-agenda/absensi/store/{uuid}', 'store_absensi')->name('proker-agenda.absensi.store');
@@ -92,7 +98,7 @@ Route::controller(EventController::class)->middleware('auth')->middleware('check
     Route::get('/proker-agenda/agenda', 'agenda')->name('proker-agenda.agenda');
 
     Route::post('/proker-agenda/program-kerja/store', 'store_proker')->name('proker-agenda.proker.store');
-    Route::get('/proker-agenda/berita', 'berita_proker')->name('proker-agenda.berita');
+    // Route::get('/proker-agenda/berita', 'berita_proker')->name('proker-agenda.berita');
 });
 
 Route::controller(EventAbsenceController::class)->group(function () {
