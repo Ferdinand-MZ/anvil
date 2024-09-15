@@ -8,7 +8,7 @@
         <div class="col-sm-12 col-12">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Tabel Pengurus</div>
+                    <div class="card-title">Tabel Berita</div>
                 </div>
                 <div class="card-body">
 
@@ -16,7 +16,7 @@
                         <a
                             href="{{ route('proker-agenda.proker.tambah') }}"
                             class="btn btn-sm btn-success"
-                        >Tambah Data</a>
+                        >Buat Artikel</a>
                     </div>
 
                     <div class="table-responsive">
@@ -26,31 +26,31 @@
                         >
                             <thead>
                                 <tr>
-                                    <th>Dibuat Oleh</th>
-                                    <th>Nama</th>
-                                    <th>Dari</th>
-                                    <th>Status</th>
-                                    <th>Tanggal Acara</th>
-                                    <th>Tanggal Mulai</th>
-                                    <th>Tanggal Selesai</th>
-                                    <th>Aksi</th>
+                                    <th style="text-align: center; vertical-align: middle;">Dibuat Oleh</th>
+                                    <th style="text-align: center; vertical-align: middle;">Nama</th>
+                                    <th style="text-align: center; vertical-align: middle;">Dari</th>
+                                    <th style="text-align: center; vertical-align: middle;">Status</th>
+                                    <th style="text-align: center; vertical-align: middle;">Tanggal Acara</th>
+                                    <th style="text-align: center; vertical-align: middle;">Tanggal Mulai</th>
+                                    <th style="text-align: center; vertical-align: middle;">Tanggal Selesai</th>
+                                    <th style="text-align: center; vertical-align: middle;">Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            {{-- <tbody>
                                 @foreach ($prokers as $key => $proker)
                                 <tr>
-                                    <td>{{ $proker->user->name }}</td>
-                                    <td>{{ $proker->name }}</td>
-                                    <td>{{ $proker->biro_department->name }}</td>
-                                    <td>{{ ucfirst($proker->status) }}</td>
-                                    <td>{{ $proker->event_day }}</td>
-                                    <td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->user->name }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->name }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->biro_department->name }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ ucfirst($proker->status) }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ $proker->event_day }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">
                                         {{ $proker->event_start ? substr($proker->event_start, 0, 10) : 'Belum dimulai' }}
                                     </td>
-                                    <td>
+                                    <td style="text-align: center; vertical-align: middle;">
                                         {{ $proker->event_finish ? substr($proker->event_finish, 0, 10) : 'Belum Selesai' }}
                                     </td>
-                                    <td>
+                                    <td style="text-align: center; vertical-align: middle;">
                                         <a
                                             href="#"
                                             class="badge badge-sm btn-warning"
@@ -62,7 +62,7 @@
                                     </td>
                                 </tr>
                                 @endforeach
-                            </tbody>
+                            </tbody> --}}
                         </table>
                     </div>
 

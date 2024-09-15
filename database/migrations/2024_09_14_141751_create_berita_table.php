@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('isi');
-            $table->string('foto');
+            $table->string('judul')->nullable();
+            $table->string('isi')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -50,6 +50,13 @@ class SidebarApp extends Component
                 ]
             ],
             [
+                'name' => 'Berita',
+                'icon' => '<i class="bi bi-newspaper"></i>',
+                'url' => 'berita',
+                'slug_name' => 'berita',
+                'access' => ['admin', 'pengurus'],
+            ],            
+            [
                 'name' => 'Proker Agenda',
                 'icon' => '<i class="bi bi-journal-bookmark-fill"></i>',
                 'url' => 'proker-agenda.proker',

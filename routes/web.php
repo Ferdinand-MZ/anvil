@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
@@ -68,6 +69,21 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/login/credentials', 'credentials')->name('credentials');
 });
 
+Route::controller(BeritaController::class)->middleware('auth')->middleware('check-status:pengurus,admin')->group(function () {
+    Route::get('/beritas', 'berita')->name('berita');
+    // Route::get('/proker-agenda/program-kerja/tambah', 'tambah_proker')->name('proker-agenda.proker.tambah');
+    // Route::get('/proker-agenda/program-kerja/detail/{uuid}', 'detail')->name('proker-agenda.proker.detail');
+
+    // Route::get('/proker-agenda/agenda', 'agenda')->name('proker-agenda.agenda');
+
+    // Route::post('/proker-agenda/program-kerja/store', 'store_proker')->name('proker-agenda.proker.store');
+    // Route::get('/proker-agenda/berita', 'berita_proker')->name('proker-agenda.berita');
+});
+
+Route::controller(EventAbsenceController::class)->group(function () {
+    Route::post('/proker-agenda/absensi/store/{uuid}', 'store_absensi')->name('proker-agenda.absensi.store');
+});
+
 Route::controller(EventController::class)->middleware('auth')->middleware('check-status:pengurus,admin')->group(function () {
     Route::get('/proker-agenda/program-kerja', 'proker')->name('proker-agenda.proker');
     Route::get('/proker-agenda/program-kerja/tambah', 'tambah_proker')->name('proker-agenda.proker.tambah');
@@ -76,6 +92,7 @@ Route::controller(EventController::class)->middleware('auth')->middleware('check
     Route::get('/proker-agenda/agenda', 'agenda')->name('proker-agenda.agenda');
 
     Route::post('/proker-agenda/program-kerja/store', 'store_proker')->name('proker-agenda.proker.store');
+    Route::get('/proker-agenda/berita', 'berita_proker')->name('proker-agenda.berita');
 });
 
 Route::controller(EventAbsenceController::class)->group(function () {
