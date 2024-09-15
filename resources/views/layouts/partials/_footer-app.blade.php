@@ -1,5 +1,5 @@
 <!-- App Footer start -->
 <footer class="app-footer">
-    <span>© Arise admin 2023</span>
+    <span>© Ferdinand MZ 2024</span>
 </footer>
 <!-- App footer end -->
