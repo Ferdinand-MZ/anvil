@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BiroDepartment;
 use App\Models\Fasilitas;
+use App\Models\Berita;
 use App\Models\PengurusHarian;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -14,10 +15,26 @@ class LandingController extends Controller
     {
         return view('landing.index', [
             'title' => 'JTIK POLSUB',
-            'pengurus_harians' => PengurusHarian::all(),
-            'biro_departments' => BiroDepartment::all()
+            'beritas' => Berita::orderBy('id', 'desc')->limit(3)->get()
         ]);
     }
+
+    public function berita(): View
+    {
+        return view('landing.berita.berita', [
+            'title' => 'JTIK POLSUB',
+            'beritas' => Berita::orderBy('id', 'desc')->get()
+        ]);
+    }
+
+    public function detail($slug): View
+{
+    $berita = Berita::where('slug', $slug)->first();
+    return view('landing.berita.detail', [
+        'title' => 'JTIK POLSUB',
+        'berita' => $berita // Changed 'beritas' to 'berita'
+    ]);
+}
 
     public function profile(): View
     {
