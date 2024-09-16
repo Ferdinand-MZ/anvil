@@ -76,7 +76,7 @@ Route::controller(BeritaController::class)->middleware('auth')->middleware('chec
     Route::post('/halaman-artikel/store', 'store')->name('halaman-artikel.store');
     Route::get('/halaman-artikel/edit/{id}', 'edit')->name('halaman-artikel.edit');
     Route::post('/halaman-artikel/update/{id}', 'update')->name('halaman-artikel.update');
-    Route::post('/halaman-artikel/destroy/{id}', 'destroy')->name('halaman-artikel.destroy');
+    Route::delete('/halaman-artikel/destroy/{id}', 'destroy')->name('halaman-artikel.destroy');
 });
 
 // Route::get('/proker-agenda/program-kerja/tambah', 'tambah_proker')->name('proker-agenda.proker.tambah');

@@ -23,64 +23,64 @@
     <!-- -------- END HEADER 7 w/ text and video ------- -->
     <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
         <!-- Section with four info areas left & one card right with image and waves -->
-        <section class="py-7" id="octagram">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                                <a class="d-block blur-shadow-image">
-                                    <img src="{{ asset('icon/octagram-no-bg.png') }}" alt="img-colored-shadow"
-                                        class="img-fluid border-radius-lg">
-                                </a>
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="font-weight-normal">
-                                    <a href="#">Memperkenalkan Kabinet Octagram</a>
-                                </h5>
-                                <p class="mb-0">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugiat laudantium in
-                                    eaque recusandae obcaecati!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
-                        <div class="card border-none shadow-none">
-                            <div class="card-body text-center">
-                                <h5 class="font-weight-normal">
-                                    <a href="#">Penjelasan</a>
-                                </h5>
-                                <p class="mb-0 text-justify">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam, suscipit
-                                    porro labore aliquid odit dolore unde illo ipsa molestias corporis tempora sapiente quia
-                                    ratione quo mollitia ipsam atque vero! Maiores, consectetur assumenda. Assumenda
-                                    provident, quos quae quasi iure vero vitae cumque! Facere dolore necessitatibus vitae,
-                                    iusto aspernatur incidunt neque doloremque cupiditate aliquid pariatur ad quas culpa,
-                                    nisi rerum, placeat omnis eos provident voluptatibus laudantium similique recusandae?
-                                    Placeat, vel, itaque est laborum ullam inventore earum, asperiores sapiente cumque
-                                    corporis adipisci pariatur harum hic nemo aperiam recusandae dolorum? Dolorem porro
-                                    aperiam perferendis, esse incidunt sequi sint ipsum debitis aliquid dicta vitae!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque reprehenderit
-                                    libero quod similique sequi sunt vero ad doloribus praesentium quasi quas atque placeat,
-                                    eos a! Repudiandae odio a praesentium, fugit eos fugiat minus illum reprehenderit
-                                    laborum vero voluptates, facilis eum distinctio earum dolores sint repellat quas eaque
-                                    quasi est totam! Minima, molestias cum esse nulla libero quidem facilis corporis
-                                    aspernatur ipsa officia fugiat repudiandae fugit eaque exercitationem dicta autem
-                                    aliquam magni deleniti facere. Id assumenda dolores fugiat quibusdam nulla, ex excepturi
-                                    itaque dicta ab quod dolorum, suscipit illum perferendis voluptate praesentium sit porro
-                                    neque cupiditate enim expedita quo nemo.
-                                </p>
+            <section class="py-7" id="octagram">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                    <a class="d-block blur-shadow-image">
+                                        <img src="{{ asset('icon/octagram-no-bg.png') }}" alt="img-colored-shadow"
+                                            class="img-fluid border-radius-lg">
+                                    </a>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="font-weight-normal">
+                                        <a href="#">Memperkenalkan Kabinet Octagram</a>
+                                    </h5>
+                                    <p class="mb-0">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugiat laudantium in
+                                        eaque recusandae obcaecati!
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
+                            <div class="card border-none shadow-none">
+                                <div class="card-body text-center">
+                                    <h5 class="font-weight-normal">
+                                        <a href="#">Penjelasan</a>
+                                    </h5>
+                                    <p class="mb-0 text-justify">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam, suscipit
+                                        porro labore aliquid odit dolore unde illo ipsa molestias corporis tempora sapiente quia
+                                        ratione quo mollitia ipsam atque vero! Maiores, consectetur assumenda. Assumenda
+                                        provident, quos quae quasi iure vero vitae cumque! Facere dolore necessitatibus vitae,
+                                        iusto aspernatur incidunt neque doloremque cupiditate aliquid pariatur ad quas culpa,
+                                        nisi rerum, placeat omnis eos provident voluptatibus laudantium similique recusandae?
+                                        Placeat, vel, itaque est laborum ullam inventore earum, asperiores sapiente cumque
+                                        corporis adipisci pariatur harum hic nemo aperiam recusandae dolorum? Dolorem porro
+                                        aperiam perferendis, esse incidunt sequi sint ipsum debitis aliquid dicta vitae!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque reprehenderit
+                                        libero quod similique sequi sunt vero ad doloribus praesentium quasi quas atque placeat,
+                                        eos a! Repudiandae odio a praesentium, fugit eos fugiat minus illum reprehenderit
+                                        laborum vero voluptates, facilis eum distinctio earum dolores sint repellat quas eaque
+                                        quasi est totam! Minima, molestias cum esse nulla libero quidem facilis corporis
+                                        aspernatur ipsa officia fugiat repudiandae fugit eaque exercitationem dicta autem
+                                        aliquam magni deleniti facere. Id assumenda dolores fugiat quibusdam nulla, ex excepturi
+                                        itaque dicta ab quod dolorum, suscipit illum perferendis voluptate praesentium sit porro
+                                        neque cupiditate enim expedita quo nemo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <!-- END Section with four info areas left & one card right with image and waves -->
         <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-        <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="our_team" >
+        {{-- <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="our_team" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 mb-5 mt-5">
@@ -125,6 +125,33 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </a>
+                </div>
+            </div>
+        </section> --}}
+
+        <section class="pb-5 position-relative bg-gradient-dark mx-n3" id="berita">
+            <div class="container py-5">
+
+                <div class="header-berita text-center">
+                        <h2 class="fw-bold">Berita Terkini Di HIMATIKOM</h2>
+                </div>
+
+                <div class="row py-5">
+                    <div class="col-lg-4">
+                        <div class="card border-0">
+                            <img src="" class="img-fluid mb-3" alt="">
+                            <div class="konten-berita">
+                                <p class="mb-3"></p>
+                                <h4 class="fw-bold mb-3"></h4>
+                                <p class="text-secondary"></p>
+                                <a href="" class="text-decoration-none text-danger">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-berita text-center">
+                    <a href="" class="btn btn-outline-danger">Berita Lainnya</a>
                 </div>
             </div>
         </section>

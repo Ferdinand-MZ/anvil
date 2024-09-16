@@ -96,7 +96,7 @@ class BeritaController extends Controller
 
 public function update(Request $request, $id)
 {
-    $artikel = Blog::find($id);
+    $berita = Berita::find($id);
 
     # Jika ada image baru
     if ($request->hasFile('foto')) {
@@ -122,31 +122,31 @@ public function update(Request $request, $id)
     // Cek jika ada image baru
     if ($request->hasFile('foto')) {
         if (\File::exists('storage/artikel/' . $berita->image)) {
-            \File::delete('storage/artikel/' . $request->old_image);
+            \File::delete('storage/artikel/' . $request->old_foto);
         }
-        $fileName = time() . '.' . $request->image->extension();
+        $fileName = time() . '.' . $request->foto->extension();
         $request->file('foto')->storeAs('public/artikel', $fileName);
     }
 
-    if ($request->hasFile('image')) {
+    if ($request->hasFile('foto')) {
         $checkFileName = $fileName;
     } else {
-        $checkFileName = $request->old_image;
+        $checkFileName = $request->old_foto;
     }
 
     // Artikel
     $storage = "storage/content-artikel";
     $dom = new \DOMDocument();
     libxml_use_internal_errors(true);
-    $dom->loadHTML($request->desc, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+    $dom->loadHTML($request->isi, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
     libxml_clear_errors();
 
     $images = $dom->getElementsByTagName('img');
 
     foreach ($images as $img) {
         $src = $img->getAttribute('src');
-        if (preg_match('/data:image/', $src)) {
-            preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+        if (preg_match('/data:foto/', $src)) {
+            preg_match('/data:foto\/(?<mime>.*?)\;/', $src, $groups);
             $mimetype = $groups['mime'];
             $fileNameContent = uniqid();
             $fileNameContentRand = substr(md5($fileNameContent), 6, 6) . '_' . time();
@@ -159,17 +159,24 @@ public function update(Request $request, $id)
         }
     }
 
-    $artikel->update([
+    $berita->update([
         'judul' => $request->judul,
-        'image' => $checkFileName,
-        'desc' => $dom->saveHTML(),
+        'foto' => $checkFileName,
+        'isi' => $dom->saveHTML(),
     ]);
 
-    return redirect(route('blog'))->with('success', 'data berhasil di update');
+    return redirect(route('halaman-artikel'))->with('success', 'data berhasil di update');
 }
 
     public function destroy($id) 
     {
+        $berita = Berita::find($id);
+        if (\File::exists('storage/artikel/' . $berita->foto)) {
+            \File::delete('storage/artikel/' . $berita->foto);
+        }
 
+        $berita->delete();
+
+        return redirect(route('halaman-artikel'))->with('success', 'data berhasil di hapus');
     }
 }
