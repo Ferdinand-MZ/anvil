@@ -203,7 +203,7 @@
                     </div>
                 </li>
                 <li class="nav-item mx-2 ms-lg-3">
-                    <a href="{{ route('landing') }}" class="nav-link ps-2 d-flex align-items-center">
+                    <a href="{{ route('berita') }}" class="nav-link ps-2 d-flex align-items-center">
                         Berita
                     </a>
                 </li>
