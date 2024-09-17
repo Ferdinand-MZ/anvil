@@ -285,10 +285,10 @@
                 <div class="row py-5" data-aos="flip-up">
                     @foreach ($beritas as $berita)
                         <div class="col-lg-4 mb-4">
-                            <div class="card border-0 shadow-sm h-100">
+                            <div class="card border-0 shadow-sm h-100 hovered-effect">
                                 <div class="position-relative overflow-hidden">
                                     <img src="{{ asset('storage/artikel/' . $berita->foto) }}" 
-                                         class="img-fluid rounded-3 w-100 h-100" 
+                                         class="img-fluid rounded-3 w-100 h-100 zoom-effect" 
                                          alt="{{ $berita->judul }}" 
                                          style="object-fit: cover; max-height: 250px;">
                                 </div>
@@ -304,6 +304,24 @@
                         </div>
                     @endforeach
                 </div>
+                
+                <style>
+                    /* Zoom effect on hover */
+                    .zoom-effect {
+                        transition: transform 0.3s ease;
+                    }
+                
+                    .hovered-effect:hover .zoom-effect {
+                        transform: scale(1.1);
+                    }
+                
+                    /* Optional: Zoom effect for the entire card */
+                    .hovered-effect:hover {
+                        transform: scale(1.02);
+                        transition: transform 0.3s ease;
+                    }
+                </style>
+                
                 
 
                 {{-- <div id="newsCarousel" class=" text-center carousel slide" data-bs-ride="carousel">
