@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mx-auto my-auto">
-                    <h1 class="text-white">HIMATIKOM POLSUB</h1>
+                    <h1 class="text-white">HIMATIKOM</h1>
                     <p class="lead mb-4 text-white opacity-8">Yes we're HIMATIKOM, Always is the best, Always in my
                         souls, Never surrender. Our pride our family.</p>
                     <h6 class="text-white mb-2 mt-5">Find Us</h6>
@@ -36,59 +36,68 @@
 <!-- -------- END HEADER 7 w/ text and video ------- -->
 <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <!-- Section with four info areas left & one card right with image and waves -->
-    <section
-        class="py-7"
-        id="octagram"
-    >
+    <section class="py-7" id="octagram">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="card">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                             <a class="d-block blur-shadow-image">
-                                <img
-                                    src="{{ asset('icon/octagram-no-bg.png') }}"
-                                    alt="img-colored-shadow"
-                                    class="img-fluid border-radius-lg"
-                                >
+                                <img src="{{ asset('icon/octagram-no-bg.png') }}" alt="img-colored-shadow"
+                                    class="img-fluid border-radius-lg">
                             </a>
                         </div>
                         <div class="card-body text-center">
                             <h5 class="font-weight-normal">
                                 <a href="#">Memperkenalkan Kabinet Octagram</a>
                             </h5>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugiat laudantium in
-                                eaque recusandae obcaecati!
+                            <p class="mb-0 text-justify mx-5">
+                                Kabinet Kemahasiswaan periode 2023-2024 dirancang sebagai motor penggerak inovasi dan kolaborasi, dengan fokus pada pengembangan mahasiswa yang lebih inklusif, progresif, dan berdaya saing.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
+                <div class="col-lg-6  ms-auto mt-lg-0 mt-3">
                     <div class="card border-none shadow-none">
-                        <div class="card-body text-center">
+                        <div class="card-body text-start">
                             <h5 class="font-weight-normal">
-                                <a href="#">Penjelasan</a>
+                                <a href="#">Visi</a>
                             </h5>
                             <p class="mb-0 text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam, suscipit
-                                porro labore aliquid odit dolore unde illo ipsa molestias corporis tempora sapiente quia
-                                ratione quo mollitia ipsam atque vero! Maiores, consectetur assumenda. Assumenda
-                                provident, quos quae quasi iure vero vitae cumque! Facere dolore necessitatibus vitae,
-                                iusto aspernatur incidunt neque doloremque cupiditate aliquid pariatur ad quas culpa,
-                                nisi rerum, placeat omnis eos provident voluptatibus laudantium similique recusandae?
-                                Placeat, vel, itaque est laborum ullam inventore earum, asperiores sapiente cumque
-                                corporis adipisci pariatur harum hic nemo aperiam recusandae dolorum? Dolorem porro
-                                aperiam perferendis, esse incidunt sequi sint ipsum debitis aliquid dicta vitae!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque reprehenderit
-                                libero quod similique sequi sunt vero ad doloribus praesentium quasi quas atque placeat,
-                                eos a! Repudiandae odio a praesentium, fugit eos fugiat minus illum reprehenderit
-                                laborum vero voluptates, facilis eum distinctio earum dolores sint repellat quas eaque
-                                quasi est totam! Minima, molestias cum esse nulla libero quidem facilis corporis
-                                aspernatur ipsa officia fugiat repudiandae fugit eaque exercitationem dicta autem
-                                aliquam magni deleniti facere. Id assumenda dolores fugiat quibusdam nulla, ex excepturi
-                                itaque dicta ab quod dolorum, suscipit illum perferendis voluptate praesentium sit porro
-                                neque cupiditate enim expedita quo nemo.
+                                VISI 
+                                HIMATIKOM POLSUB 
+                                KABINET OCTAGRAM 
+                                “Mewujudkan Himpunan Mahasiswa Teknologi Informasi dan Komputer 
+                                (HIMATIKOM) sebagai wadah dalam pengembangan dan pemberdayaan Mahasiswa 
+                                teknologi Informasi dan Komputer dalam berorganisasi yang menjungjung tinggi rasa 
+                                kekeluargaan.”
+                            </p>
+                            <h5 class="font-weight-normal mt-3">
+                                <a href="#">Misi</a>
+                            </h5>
+                            <p class="mb-0 text-justify">
+                                1. Menjaga Kestabilan Pengembangan dan Pemberdayaan Di Dalam Himpunan Sesuai Dengan AD/ART <br>
+                                2. Menyediakan Sarana Untuk Mendorong Kreativitas, Inovasi, Aspirasi, dan Kolaborasi Antar Anggota <br>
+                                3. Meningkatkan Kualitas Proker dan Agenda Himpunan Demi Memperkuat Ikatan Kekeluargaan Pada Himpunan
+                            </p>
+                            <h5 class="font-weight-normal mt-3">
+                                <a href="#">Makna Logo</a>
+                            </h5>
+                            <p class="mb-0 text-justify">
+                                1. Octagram bermakna keseimbangan <br>
+                                2. Spiral bermakna mencerminkan perjalanan yang berkelanjutan dan perubahan seiring 
+                                waktu. Merepresentasikan proses kreativitas, dan inspirasi. Spiral dapat menggambarkan 
+                                aliran ide yang tak terputus.
+                            </p>
+                            <h5 class="font-weight-normal mt-3">
+                                <a href="#">Makna Warna</a>
+                            </h5>
+                            <p class="mb-0 text-justify">
+                                1. Biru melambangkan kedamaian, kejujuran dan percaya diri. <br>
+                                2. Ungu melambangkan kreativitas dan kebijaksanaan. <br>
+                                3. Merah Muda melambangkan kekeluargaan yang harmonis, <br>
+                                4. Ketiga warna menyatu bermakna tentang keberanian yang tenang, penuh kasih, dan 
+                                percaya diri.
                             </p>
                         </div>
                     </div>
@@ -173,59 +182,7 @@
     </section>
     <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
     <!-- -------- START PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
-    <section
-        class="my-5 pt-5"
-        id="feedback"
-    >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 m-auto">
-                    <div class="card shadow-none">
-                        <div class="card-header">
-                            <h4>Berikan Feedback</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-4">
-                                <div class="input-group input-group-dynamic">
-                                    <label class="form-label">Email Address</label>
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                    >
-                                </div>
-                            </div>
-                            <div class="input-group mb-4 input-group-static">
-                                <label>Your message</label>
-                                <textarea
-                                    name="message"
-                                    class="form-control"
-                                    id="message"
-                                    rows="4"
-                                ></textarea>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button
-                                        type="submit"
-                                        class="btn bg-gradient-dark w-100"
-                                    >Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 ms-auto">
-                    <div class="position-relative">
-                        <img
-                            class="max-width-50 w-100 position-relative z-index-2"
-                            src="{{ asset('material-kit') }}/assets/img/macbook.png"
-                            alt="image"
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
 </div>
 @endsection

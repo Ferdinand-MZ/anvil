@@ -5,15 +5,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <!-- Logo POLSUB dan HIMATIKOM -->
                     <div class="d-flex align-items-center">
-                        <a href="https://polsub.ac.id">
-                            <img
-                                src="{{ asset('logo/logoPOLSUB-HD.png') }}"
-                                class="mb-3 footer-logo"
-                                alt="main_logo"
-                                style="height: 40px; width: auto; margin-right: 10px;"
-                            >
-                        </a>
-                        <a href="">
+                        <a href="#">
                             <img
                                 src="{{ asset('icon/logo-himpunan.png') }}"
                                 class="mb-3 footer-logo"
@@ -27,7 +19,7 @@
 
                     <!-- Teks di tengah -->
                     <h6 class="font-weight-bolder text-center">
-                        JURUSAN TEKNOLOGI INFORMASI & KOMPUTER | POLSUB
+                        HIMATIKOM | POLSUB
                     </h6>
 
                     <!-- Ikon media sosial di sebelah kanan -->

@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center mx-auto my-auto position-relative">
-                        <h1 class="text-white position-relative">JURUSAN TEKNOLOGI & INFORMASI
+                        <h1 class="text-white position-relative">HIMATIKOM
                             <div class="line"></div>
                         </h1>
                         <p class="lead mb-4 text-white opacity-8">Yes we are HIMATIKOM.
@@ -54,38 +54,53 @@
                                 <h5 class="font-weight-normal">
                                     <a href="#">Memperkenalkan Kabinet Octagram</a>
                                 </h5>
-                                <p class="mb-0">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugiat laudantium in
-                                    eaque recusandae obcaecati!
+                                <p class="mb-0 text-justify mx-5">
+                                    Kabinet Kemahasiswaan periode 2023-2024 dirancang sebagai motor penggerak inovasi dan kolaborasi, dengan fokus pada pengembangan mahasiswa yang lebih inklusif, progresif, dan berdaya saing.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6  ms-auto mt-lg-0 mt-4">
+                    <div class="col-lg-6  ms-auto mt-lg-0 mt-3">
                         <div class="card border-none shadow-none">
-                            <div class="card-body text-center">
+                            <div class="card-body text-start">
                                 <h5 class="font-weight-normal">
-                                    <a href="#">Penjelasan</a>
+                                    <a href="#">Visi</a>
                                 </h5>
                                 <p class="mb-0 text-justify">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam, suscipit
-                                    porro labore aliquid odit dolore unde illo ipsa molestias corporis tempora sapiente quia
-                                    ratione quo mollitia ipsam atque vero! Maiores, consectetur assumenda. Assumenda
-                                    provident, quos quae quasi iure vero vitae cumque! Facere dolore necessitatibus vitae,
-                                    iusto aspernatur incidunt neque doloremque cupiditate aliquid pariatur ad quas culpa,
-                                    nisi rerum, placeat omnis eos provident voluptatibus laudantium similique recusandae?
-                                    Placeat, vel, itaque est laborum ullam inventore earum, asperiores sapiente cumque
-                                    corporis adipisci pariatur harum hic nemo aperiam recusandae dolorum? Dolorem porro
-                                    aperiam perferendis, esse incidunt sequi sint ipsum debitis aliquid dicta vitae!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque reprehenderit
-                                    libero quod similique sequi sunt vero ad doloribus praesentium quasi quas atque placeat,
-                                    eos a! Repudiandae odio a praesentium, fugit eos fugiat minus illum reprehenderit
-                                    laborum vero voluptates, facilis eum distinctio earum dolores sint repellat quas eaque
-                                    quasi est totam! Minima, molestias cum esse nulla libero quidem facilis corporis
-                                    aspernatur ipsa officia fugiat repudiandae fugit eaque exercitationem dicta autem
-                                    aliquam magni deleniti facere. Id assumenda dolores fugiat quibusdam nulla, ex excepturi
-                                    itaque dicta ab quod dolorum, suscipit illum perferendis voluptate praesentium sit porro
-                                    neque cupiditate enim expedita quo nemo.
+                                    VISI 
+                                    HIMATIKOM POLSUB 
+                                    KABINET OCTAGRAM 
+                                    “Mewujudkan Himpunan Mahasiswa Teknologi Informasi dan Komputer 
+                                    (HIMATIKOM) sebagai wadah dalam pengembangan dan pemberdayaan Mahasiswa 
+                                    teknologi Informasi dan Komputer dalam berorganisasi yang menjungjung tinggi rasa 
+                                    kekeluargaan.”
+                                </p>
+                                <h5 class="font-weight-normal mt-3">
+                                    <a href="#">Misi</a>
+                                </h5>
+                                <p class="mb-0 text-justify">
+                                    1. Menjaga Kestabilan Pengembangan dan Pemberdayaan Di Dalam Himpunan Sesuai Dengan AD/ART <br>
+                                    2. Menyediakan Sarana Untuk Mendorong Kreativitas, Inovasi, Aspirasi, dan Kolaborasi Antar Anggota <br>
+                                    3. Meningkatkan Kualitas Proker dan Agenda Himpunan Demi Memperkuat Ikatan Kekeluargaan Pada Himpunan
+                                </p>
+                                <h5 class="font-weight-normal mt-3">
+                                    <a href="#">Makna Logo</a>
+                                </h5>
+                                <p class="mb-0 text-justify">
+                                    1. Octagram bermakna keseimbangan <br>
+                                    2. Spiral bermakna mencerminkan perjalanan yang berkelanjutan dan perubahan seiring 
+                                    waktu. Merepresentasikan proses kreativitas, dan inspirasi. Spiral dapat menggambarkan 
+                                    aliran ide yang tak terputus.
+                                </p>
+                                <h5 class="font-weight-normal mt-3">
+                                    <a href="#">Makna Warna</a>
+                                </h5>
+                                <p class="mb-0 text-justify">
+                                    1. Biru melambangkan kedamaian, kejujuran dan percaya diri. <br>
+                                    2. Ungu melambangkan kreativitas dan kebijaksanaan. <br>
+                                    3. Merah Muda melambangkan kekeluargaan yang harmonis, <br>
+                                    4. Ketiga warna menyatu bermakna tentang keberanian yang tenang, penuh kasih, dan 
+                                    percaya diri.
                                 </p>
                             </div>
                         </div>

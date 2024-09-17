@@ -43,7 +43,7 @@
                         aria-expanded="false"
                     >
                         
-                        Tentang JTIK
+                        Tentang
                         <img
                             src="{{ asset('material-kit') }}/assets/img/down-arrow-white.svg"
                             alt="down-arrow"
@@ -156,7 +156,7 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        Program Studi
+                        Program
                         <img
                             src="{{ asset('material-kit') }}/assets/img/down-arrow-white.svg"
                             alt="down-arrow"
