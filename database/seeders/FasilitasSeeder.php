@@ -19,7 +19,7 @@ class FasilitasSeeder extends Seeder
                 'photo' => 'fasilitas/fasilitas 1.jpg',
             ],
             [
-                'nama' => 'Lab Komputer',
+                'nama' => 'Lab UI/UX',
                 'photo' => 'fasilitas/fasilitas 2.jpg',
             ],
             [
