@@ -15,21 +15,25 @@ class FasilitasSeeder extends Seeder
     {
         $fasilitas = [
             [
-                'nama' => 'Laboratorium Bahasa',
+                'nama' => 'Ruang Teori',
                 'photo' => 'fasilitas/fasilitas 1.jpg',
             ],
             [
-                'nama' => 'Aula',
+                'nama' => 'Lab Komputer',
                 'photo' => 'fasilitas/fasilitas 2.jpg',
             ],
             [
-                'nama' => 'Laboratorium Komputer',
+                'nama' => 'Musholla',
                 'photo' => 'fasilitas/fasilitas 3.jpg',
             ],
             [
-                'nama' => 'Masjid',
+                'nama' => 'Kantin',
                 'photo' => 'fasilitas/fasilitas 4.jpg',
-            ]
+            ],
+            [
+                'nama' => 'Pojok Membaca',
+                'photo' => 'fasilitas/fasilitas 5.jpg',
+            ],
         ];
         foreach ($fasilitas as $fasilitas) {
             Fasilitas::insert([
