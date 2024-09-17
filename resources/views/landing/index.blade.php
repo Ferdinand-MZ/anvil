@@ -67,13 +67,10 @@
                                     <a href="#">Visi</a>
                                 </h5>
                                 <p class="mb-0 text-justify">
-                                    VISI 
-                                    HIMATIKOM POLSUB 
-                                    KABINET OCTAGRAM 
-                                    “Mewujudkan Himpunan Mahasiswa Teknologi Informasi dan Komputer 
+                                    Mewujudkan Himpunan Mahasiswa Teknologi Informasi dan Komputer 
                                     (HIMATIKOM) sebagai wadah dalam pengembangan dan pemberdayaan Mahasiswa 
                                     teknologi Informasi dan Komputer dalam berorganisasi yang menjungjung tinggi rasa 
-                                    kekeluargaan.”
+                                    kekeluargaan.
                                 </p>
                                 <h5 class="font-weight-normal mt-3">
                                     <a href="#">Misi</a>

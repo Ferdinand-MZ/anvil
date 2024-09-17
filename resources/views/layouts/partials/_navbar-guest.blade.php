@@ -6,8 +6,8 @@
             href="/"
             title="Politeknik Negeri Subang"
         >
-            <img src="{{ asset('logo/logoPOLSUB-HD.png') }}" alt="Logo" style="height: 40px; width: auto;" class="me-2">
-            JTIK POLSUB
+            <img src="{{ asset('logo/Himatikom.png') }}" alt="Logo" style="height: 40px; width: auto;" class="me-2">
+            HIMATIKOM POLSUB
         </a>
 
         <button
