@@ -39,7 +39,7 @@
     <!-- -------- END HEADER 7 w/ text and video ------- -->
     <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
         <!-- Section with four info areas left & one card right with image and waves -->
-        <section class="py-7" id="octagram">
+        {{-- <section class="py-7" id="octagram">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4">
@@ -93,8 +93,8 @@
 
                 </div>
             </div>
-        </section>
-        <hr style="background-color: #0B2F9F">
+        </section> --}}
+        {{-- <hr style="background-color: #0B2F9F"> --}}
         <section class="my-5">
             <div class="container">
                 <div class="row">
