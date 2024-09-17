@@ -284,23 +284,57 @@
 
                 <div class="row py-5" data-aos="flip-up">
                     @foreach ($beritas as $berita)
-                        <div class="col-lg-4">
-                            <div class="card border-0">
-                                <img src="{{ asset('storage/artikel/' . $berita->foto) }}" class="img-fluid mb-3"
-                                    alt="" width="600" height="400">
-                                <div class="konten-berita">
-                                    <p class="mb-3">{{ $berita->created_at }}</p>
-                                    <h4 class="fw-bold mb-3">{{ $berita->judul }}</h4>
-                                    <p class="text-secondary"></p>
-                                    <a href="/detail/{{ $berita->slug }}" class="text-decoration-none text-danger">Baca
-                                        Selengkapnya</a>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="position-relative overflow-hidden">
+                                    <img src="{{ asset('storage/artikel/' . $berita->foto) }}" 
+                                         class="img-fluid rounded-3 w-100 h-100" 
+                                         alt="{{ $berita->judul }}" 
+                                         style="object-fit: cover; max-height: 250px;">
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted small mb-2">{{ $berita->created_at->format('d M Y') }}</p>
+                                    <h5 class="fw-bold mb-3">{{ $berita->judul }}</h5>
+                                    <a href="/detail/{{ $berita->slug }}" 
+                                       class="text-decoration-none text-danger fw-bold">
+                                        Ke Halaman >>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
+                
 
-                <div class="footer-berita text-center">
+                {{-- <div id="newsCarousel" class=" text-center carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($beritas as $berita)
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                        <div class="col-lg-4 col-md-6 col-12 my-3">
+                                            <div class="card border-0 shadow-lg rounded">
+                                                <a href="#">
+                                                    <img class="card-img-top rounded-top"
+                                                        src="{{ asset($berita->foto) }}"
+                                                        alt="Photo of {{ $berita->judul }}">
+                                                </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title mb-2">{{ $berita->judul }}</h5>
+                                                    </p>
+                                                    <a href="#" class="btn btn-primary mt-2">Baca Selengkapnya</a>
+                                                </div>
+                                                <div class="card-footer text-muted text-end">
+                                                    {{ $berita->created_at}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                <div class="footer-berita text-center"> --}}
                     <a href="/berita" class="btn btn-danger btn-outline-danger">Berita Lainnya</a>
                 </div>
             </div>
