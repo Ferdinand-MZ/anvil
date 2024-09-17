@@ -39,10 +39,10 @@
     <!-- -------- END HEADER 7 w/ text and video ------- -->
     <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
         <!-- Section with four info areas left & one card right with image and waves -->
-        {{-- <section class="py-7" id="octagram">
+        <section class="py-7" id="octagram">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         <div class="card">
                             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                 <a class="d-block blur-shadow-image">
@@ -93,8 +93,8 @@
 
                 </div>
             </div>
-        </section> --}}
-        {{-- <hr style="background-color: #0B2F9F"> --}}
+        </section>
+        <hr style="background-color: #0B2F9F">
         <section class="my-5">
             <div class="container">
                 <div class="row">
@@ -285,74 +285,39 @@
                 <div class="row py-5" data-aos="flip-up">
                     @foreach ($beritas as $berita)
                         <div class="col-lg-4 mb-4">
+
                             <div class="card border-0 shadow-sm h-100 hovered-effect">
+
                                 <div class="position-relative overflow-hidden">
-                                    <img src="{{ asset('storage/artikel/' . $berita->foto) }}" 
-                                         class="img-fluid rounded-3 w-100 h-100 zoom-effect" 
-                                         alt="{{ $berita->judul }}" 
-                                         style="object-fit: cover; max-height: 250px;">
+
+                                    <img src="{{ asset('storage/artikel/' . $berita->foto) }}"
+                                        class="img-fluid rounded-3 w-100 h-100 zoom-effect" alt="{{ $berita->judul }}"
+                                        style="object-fit: cover; max-height: 250px;">
+
                                 </div>
+
                                 <div class="card-body">
+
                                     <p class="text-muted small mb-2">{{ $berita->created_at->format('d M Y') }}</p>
+
                                     <h5 class="fw-bold mb-3">{{ $berita->judul }}</h5>
-                                    <a href="/detail/{{ $berita->slug }}" 
-                                       class="text-decoration-none text-danger fw-bold">
+
+                                    <a href="/detail/{{ $berita->slug }}"
+                                        class="text-decoration-none text-danger fw-bold">
+
                                         Ke Halaman >>
+
                                     </a>
+
                                 </div>
+
                             </div>
+
                         </div>
                     @endforeach
                 </div>
-                
-                <style>
-                    /* Zoom effect on hover */
-                    .zoom-effect {
-                        transition: transform 0.3s ease;
-                    }
-                
-                    .hovered-effect:hover .zoom-effect {
-                        transform: scale(1.1);
-                    }
-                
-                    /* Optional: Zoom effect for the entire card */
-                    .hovered-effect:hover {
-                        transform: scale(1.02);
-                        transition: transform 0.3s ease;
-                    }
-                </style>
-                
-                
 
-                {{-- <div id="newsCarousel" class=" text-center carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($beritas as $berita)
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                        <div class="col-lg-4 col-md-6 col-12 my-3">
-                                            <div class="card border-0 shadow-lg rounded">
-                                                <a href="#">
-                                                    <img class="card-img-top rounded-top"
-                                                        src="{{ asset($berita->foto) }}"
-                                                        alt="Photo of {{ $berita->judul }}">
-                                                </a>
-                                                <div class="card-body">
-                                                    <h5 class="card-title mb-2">{{ $berita->judul }}</h5>
-                                                    </p>
-                                                    <a href="#" class="btn btn-primary mt-2">Baca Selengkapnya</a>
-                                                </div>
-                                                <div class="card-footer text-muted text-end">
-                                                    {{ $berita->created_at}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                <div class="footer-berita text-center"> --}}
+                <div class="footer-berita text-center">
                     <a href="/berita" class="btn btn-danger btn-outline-danger">Berita Lainnya</a>
                 </div>
             </div>
@@ -375,7 +340,7 @@
                     </div>
                     <div class="row ">
                         <div class="col-12 col-lg-5  ms-auto mt-lg-0 mt-4">
-                            <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8">
+                            <div class="card shadow-xl h-100 px-6 py-6 outline">
                                 <div class="card-body text-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="158" x="0"
@@ -434,7 +399,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-5  ms-auto mt-lg-0 mt-4">
-                            <div class="card shadow-xl h-100 px-6 py-6 outline" style="background-color: #F5F7F8">
+                            <div class="card shadow-xl h-100 px-6 py-6 outline">
                                 <div class="card-body text-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="158" x="0"
@@ -508,30 +473,27 @@
 
         <section class="pb-5 position-relative bg-gradient-dark mx-n3">
             <div class="container py-5">
-        
+
                 <div class="header-berita text-center">
                     <h2 class="fw-bold" style="color: white">Lokasi Kampus</h2>
                 </div>
-        
+
                 <!-- Google Maps Embed -->
                 <div class="maps-embed text-center my-4">
-                    <iframe 
+                    <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.649276950203!2d107.82526711200764!3d-6.56587569339995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e693b9ae39cc0eb%3A0x76db7b3959df2011!2sPoliteknik%20Negeri%20Subang%2C%20Kampus%20Utama%20Cibogo!5e0!3m2!1sid!2sid!4v1726531188919!5m2!1sid!2sid"
-                        width="100%" 
-                        height="450" 
-                        style="border:0; border-radius: 20px;"
-                        allowfullscreen="" 
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                        width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-        
+
                 <div class="footer-berita text-center">
-                    <a href="https://maps.app.goo.gl/QtSXVedPVkS51NjF6" target="_blank" class="btn btn-danger btn-outline-danger">Lihat di Maps</a>
+                    <a href="https://maps.app.goo.gl/QtSXVedPVkS51NjF6" target="_blank"
+                        class="btn btn-danger btn-outline-danger">Lihat di Maps</a>
                 </div>
             </div>
         </section>
-        
+
         <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
     </div>
 @endsection
