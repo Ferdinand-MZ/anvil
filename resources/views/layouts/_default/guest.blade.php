@@ -58,14 +58,12 @@
             color: white;
             font-size: 18px;
             flex-shrink: 0;
-            /* Prevents the circle from shrinking */
         }
 
         .d-block {
             margin-top: 2px;
         }
 
-        /* Adjust margin and padding for label and anchor */
         .form-label {
             margin-bottom: 0;
         }
@@ -74,9 +72,12 @@
             padding-left: 0;
             text-decoration: none;
         }
-        
     </style>
-    @include('layouts.partials._navbar-guest')
+
+    <!-- Tampilkan navbar hanya jika halaman bukan halaman detail -->
+    @if (!Request::is('detail/*'))
+        @include('layouts.partials._navbar-guest')
+    @endif
 
     @yield('content')
 
