@@ -74,6 +74,7 @@
             padding-left: 0;
             text-decoration: none;
         }
+        
     </style>
     @include('layouts.partials._navbar-guest')
 

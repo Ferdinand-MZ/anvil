@@ -41,6 +41,57 @@
         .accordion-body {
             overflow: hidden;
         }
+        .table-container {
+        overflow-x: auto;
+    }
+
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .styled-table th, .styled-table td {
+        padding: 12px 15px;
+        border: 1px solid #0B2F9F;
+        text-align: left;
+    }
+
+    .styled-table th {
+        background-color: #0B2F9F;
+        font-weight: bold;
+    }
+
+    /* Media Query untuk tampilan mobile */
+    @media screen and (max-width: 768px) {
+        .styled-table th, .styled-table td {
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        .styled-table th.w-20, .styled-table td.w-20 {
+            width: 15%;
+        }
+
+        .styled-table th.w-40, .styled-table td.w-40 {
+            width: 35%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .styled-table th, .styled-table td {
+            padding: 6px 8px;
+            font-size: 12px;
+        }
+
+        .styled-table th.w-20, .styled-table td.w-20 {
+            width: 20%;
+        }
+
+        .styled-table th.w-40, .styled-table td.w-40 {
+            width: 40%;
+        }
+    }
+
 </style>
     <!-- -------- START HEADER 7 w/ text and video ------- -->
     <header class="bg-gradient-dark">
@@ -86,157 +137,157 @@
                                     style="border-radius: 15px; max-width: 100%; height: auto;"
                                 >
                             </div>
-                            {{-- ! Table Manajemen Jurusan Periode 2021-2024 --}}
-                            <label for="" class="text text-start fs-6 text-bold">A. Manajemen Jurusan Periode
-                                2021-2024</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ketua Jurusan</td>
-                                        <td>Tri Herdiawan A., S.ST., M.T.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Sekretaris Jurusan</td>
-                                        <td>Rian Piarna, S.E., M.M.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {{-- !  Table Program Studi --}}
-                            <label for="" class="text text-start fs-6 text-bold mt-3">B. Program Studi</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ka. Prodi D-III Sistem Informasi</td>
-                                        <td>Dwi Vernanda, S.T., M.Pd.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Ka. Prodi D-IV Teknologi Rekayasa Perangkat Lunak</td>
-                                        <td>Mohammad Iqbal, S.Kom., M.T.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {{-- ! Table Kelompok Bidang Keahlian --}}
-                            <label for="" class="text text-start fs-6 text-bold mt-3">C. Kelompok Bidang Keahlian
-                                (KBK)</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ka. KBK Sistem Informasi dan Database</td>
-                                        <td>Mohammad Iqbal, S.Kom, M.T.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Ka. KBK Teknologi Informasi & Rekayasa Perangkat Lunak</td>
-                                        <td>Slamet Rahayu, S.Pd., M.Pd</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {{-- ! Table Laboratorium --}}
-                            <label for="" class="text text-start fs-6 text-bold mt-3">D. Laboratorium</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ka. Lab. Sistem Informasi</td>
-                                        <td>Taufan Abdurrachman, S.T., M.Kom.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Ka. Lab. Manajemen Data dan Informasi</td>
-                                        <td>Haryati, S.Pd., M.Pd.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Ka. Lab. Rekayasa Perangkat Lunak</td>
-                                        <td>Sari Azhariyah, S.Pd, M.Pd.T.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Ka. Lab. Komputer dan Jaringan</td>
-                                        <td>Slamet Rahayu, S.Pd., M.Pd.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Ka. Lab. User Experience</td>
-                                        <td>Chepy Perdana, S.Kom., M.Pd.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {{-- ! Table Laboratorium --}}
-                            <label for="" class="text text-start fs-6 text-bold mt-3">E. Wali kelas Program Studi
-                                D-III Sistem Informasi</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {{-- ! Table Pembina Himpunan --}}
-                            <label for="" class="text text-start fs-6 text-bold mt-3">F. Pembina Himpunan</label>
-                            <table class="styled-table mt-2">
-                                <thead>
-                                    <tr>
-                                        <th class="w-20">No</th>
-                                        <th class="w-40">Jabatan</th>
-                                        <th class="w-40">Nama</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Pembina Himpunan</td>
-                                        <td>Haryati, S.Pd., M.Pd.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-container">
+                                {{-- ! Table Manajemen Jurusan Periode 2021-2024 --}}
+                                <label for="" class="text text-start fs-6 text-bold">A. Manajemen Jurusan Periode 2021-2024</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ketua Jurusan</td>
+                                            <td>Tri Herdiawan A., S.ST., M.T.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Sekretaris Jurusan</td>
+                                            <td>Rian Piarna, S.E., M.M.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                {{-- ! Table Program Studi --}}
+                                <label for="" class="text text-start fs-6 text-bold mt-3">B. Program Studi</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ka. Prodi D-III Sistem Informasi</td>
+                                            <td>Dwi Vernanda, S.T., M.Pd.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ka. Prodi D-IV Teknologi Rekayasa Perangkat Lunak</td>
+                                            <td>Mohammad Iqbal, S.Kom., M.T.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                {{-- ! Table Kelompok Bidang Keahlian --}}
+                                <label for="" class="text text-start fs-6 text-bold mt-3">C. Kelompok Bidang Keahlian (KBK)</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ka. KBK Sistem Informasi dan Database</td>
+                                            <td>Mohammad Iqbal, S.Kom, M.T.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ka. KBK Teknologi Informasi & Rekayasa Perangkat Lunak</td>
+                                            <td>Slamet Rahayu, S.Pd., M.Pd</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                {{-- ! Table Laboratorium --}}
+                                <label for="" class="text text-start fs-6 text-bold mt-3">D. Laboratorium</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ka. Lab. Sistem Informasi</td>
+                                            <td>Taufan Abdurrachman, S.T., M.Kom.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ka. Lab. Manajemen Data dan Informasi</td>
+                                            <td>Haryati, S.Pd., M.Pd.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Ka. Lab. Rekayasa Perangkat Lunak</td>
+                                            <td>Sari Azhariyah, S.Pd, M.Pd.T.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Ka. Lab. Komputer dan Jaringan</td>
+                                            <td>Slamet Rahayu, S.Pd., M.Pd.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Ka. Lab. User Experience</td>
+                                            <td>Chepy Perdana, S.Kom., M.Pd.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                {{-- ! Table Wali kelas --}}
+                                <label for="" class="text text-start fs-6 text-bold mt-3">E. Wali kelas Program Studi D-III Sistem Informasi</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                {{-- ! Table Pembina Himpunan --}}
+                                <label for="" class="text text-start fs-6 text-bold mt-3">F. Pembina Himpunan</label>
+                                <table class="styled-table mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-20">No</th>
+                                            <th class="w-40">Jabatan</th>
+                                            <th class="w-40">Nama</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Pembina Himpunan</td>
+                                            <td>Haryati, S.Pd., M.Pd.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
                             <hr style="background-color: #0B2F9F" class="mt-1">
                             <h5 for="" class="text text-start text-bold mt-2">TUGAS POKOK DAN FUNGSI JURUSAN
                                 TEKNOLOGI DAN INFORMASI</h5>
